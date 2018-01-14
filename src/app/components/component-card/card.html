@@ -1,0 +1,21 @@
+
+<div class="card" [ngStyle]="{'float':isFloatRight === true ? 'right' : 'left' }">
+	<div class="card-header ">
+        <label>Vous êtes {{entityName}} ?</label>
+	</div>
+	<div class="card-content">
+        <ul>
+            <li *ngFor="let avantage of arrayAvantages" [ngStyle]="{'height': ''+(100/arrayAvantages.length)+'%' }">
+                <i class="material-icons">done</i>
+                {{avantage}}</li>
+        </ul>
+    </div>
+    <div class="card-footer">
+            <button mat-button >
+                <i class="material-icons">save</i> 
+                <span>CREER UN COMPTE !</span></button>
+            <span>Déjà inscrit ? <a href="#">Connectez-vous</a></span>
+    </div>
+</div>
+
+
