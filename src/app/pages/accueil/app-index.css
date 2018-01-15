@@ -241,3 +241,6 @@
     .product-item .ribbon span{
         color: white;
     }
+    .product-item-holder .price-prev{
+      text-decoration: line-through;
+    }

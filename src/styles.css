@@ -84,7 +84,6 @@ Table of Contents
 
 .bold, .availability .available, .availability .not-available, .inline-input .placeholder, header .top-cart-row .top-cart-holder .basket-item .price, .le-dropdown, .product-item-holder .price-prev, .grid-list-products .grid-list-buttons ul li.active a, .meta-row label, .sidebar .price-range-holder .filter-button a, .sidebar .widget .product-list .price .price-current {
   font-weight: 700 !important; 
-  text-decoration: line-through;
 }
 
 .auto-width {
@@ -684,13 +683,6 @@ header {
       border: 3px solid #c6c6c6;
       border-radius: 7px;
       margin: 8px 0 0 0; }
-      header .top-search-holder .search-area .search-field, header .top-search-holder .search-area .search-button, header .top-search-holder .search-area .categories-filter {
-        display: inline-block; }
-      header .top-search-holder .search-area .search-field {
-        border-radius: 5px 0 0 5px;
-        border: none;
-        width: 65%;
-        padding: 13px; }
       header .top-search-holder .search-area .search-button {
         float: right;
         display: inline-block;
@@ -1175,7 +1167,7 @@ header {
   display: inline-block;
   line-height: 20px;
   border: none;
-  font-size: 15px;
+  font-size: 12px;
   color: #fff;
   transition: 0.3s ease; }
   .le-button.huge {
@@ -1964,7 +1956,7 @@ header {
         margin: 0 0 0 4px; 
         }
       .products-list .product-item .row .price-area .le-button {
-        padding: 13px 28px;
+        /*padding: 13px 28px;*/
         margin: 0 0 18px 0; }
 
 /*===================================================================================*/
