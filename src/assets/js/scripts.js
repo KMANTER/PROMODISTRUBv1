@@ -14,10 +14,23 @@
     /*===================================================================================*/
 
     $(document).ready(function () {
-
+       
         var dragging = true;
         var owlElementID = "#owl-main";
-
+        //pub promo banner 
+        $("#owl-pub-banner").owlCarousel({
+            
+                 navigation : true, // Show next and prev buttons
+            
+                 slideSpeed : 300,
+                 paginationSpeed : 400,
+            
+                 items : 1, 
+                 itemsDesktop : false,
+                 itemsDesktopSmall : false,
+                 itemsTablet: false,
+                 itemsMobile : false
+        });
         function fadeInReset() {
             if (!dragging) {
                 $(owlElementID + " .caption .fadeIn-1, " + owlElementID + " .caption .fadeIn-2, " + owlElementID + " .caption .fadeIn-3").stop().delay(800).animate({ opacity: 0 }, { duration: 400, easing: "easeInCubic" });

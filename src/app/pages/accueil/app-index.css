@@ -47,6 +47,7 @@
               display: block;
               padding: 0;
               width: 100%; }
+
         .sidemenu-holder .side-menu nav .nav > li:last-child {
           border-bottom: 1px solid #e0e0e0;
           border-radius: 0 0 5px 5px; }
@@ -230,3 +231,13 @@
       margin-top: 0;
       opacity: 1; } }
     
+
+      #owl-pub-banner .item img{
+        display: block;
+        width: 100%;
+        height: 300px;
+    }
+
+    .product-item .ribbon span{
+        color: white;
+    }

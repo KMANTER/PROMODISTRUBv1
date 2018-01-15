@@ -83,7 +83,9 @@ Table of Contents
   color: #747474 !important; }
 
 .bold, .availability .available, .availability .not-available, .inline-input .placeholder, header .top-cart-row .top-cart-holder .basket-item .price, .le-dropdown, .product-item-holder .price-prev, .grid-list-products .grid-list-buttons ul li.active a, .meta-row label, .sidebar .price-range-holder .filter-button a, .sidebar .widget .product-list .price .price-current {
-  font-weight: 700 !important; }
+  font-weight: 700 !important; 
+  text-decoration: line-through;
+}
 
 .auto-width {
   width: auto !important; }
@@ -1959,7 +1961,8 @@ header {
       .products-list .product-item .row .price-area .price-prev {
         display: inline-block;
         vertical-align: middle;
-        margin: 0 0 0 4px; }
+        margin: 0 0 0 4px; 
+        }
       .products-list .product-item .row .price-area .le-button {
         padding: 13px 28px;
         margin: 0 0 18px 0; }
@@ -2196,7 +2199,8 @@ header {
     text-decoration: line-through;
     vertical-align: bottom;
     line-height: 40px;
-    margin: 0 0 0 16px; }
+    margin: 0 0 0 16px; 
+  }
   #single-product .body-holder .qnt-holder {
     margin: 24px 0; }
   #single-product .body-holder #addto-cart {
@@ -3692,3 +3696,7 @@ select.top-drop-menu {
 @media (min-width: 1200px) {
   .owl-buttons {
     display: block; } }
+
+#category-grid{
+  margin-top: 40px;
+}
