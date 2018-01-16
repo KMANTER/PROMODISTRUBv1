@@ -1,0 +1,52 @@
+body{
+    height: 987px;
+}
+.bloc-img-accueil{
+    background-image: url("../../assets/images/background-images/landing-background-img.jpg");
+    height: 987px;
+    background-repeat: no-repeat;  background-position: 50% 0;
+    opacity:0.6;   
+    position: absolute; 
+}
+
+.titre-app, .slogon, .parag{
+    font-family: fontawesome;
+    font-size: 45px;
+    text-align: center;    
+    color: black;
+    font-weight: bold;
+}
+.slogon{
+    font-size: 37px;
+    font-weight: unset;
+}
+.parag{
+    font-size: 17px;
+    font-weight: unset;
+}
+app-footer{
+    position: relative;
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+	body{
+        height: 1400px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .bloc-img-accueil{
+        height: 1400px;    
+        background-repeat: repeat-y;    
+    }
+}
+@media (max-width: 600px) {
+	body{
+        height: 1700px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .bloc-img-accueil{
+        height: 1700px;    
+        background-repeat: repeat-y;    
+    }
+}

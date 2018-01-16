@@ -27,13 +27,13 @@
             </li>
             <li style="float:right;border-left:1px solid #FFF; background-color: #63B1F4">
                 
-                <a href="" style="padding-top: 10px"><i class="material-icons" style="margin-right: 10px">account_circle</i> <span>Mon compte</span></a> 
+                <a href="/accueil" style="padding-top: 10px" (click)="setSession()"><i class="material-icons" style="margin-right: 10px">account_circle</i> <span>Mon compte</span></a> 
             </li>
           </ul>
         </nav>
     </div>
 
-    <div class="col-xs-12 col-md-6 top-search-holder no-margin">
+    <div class="col-xs-12 col-md-6 top-search-holder no-margin" *ngIf="isLoggedIn=='true'">
         <div class="search-area">
             <form>
                 <div class="control-group">

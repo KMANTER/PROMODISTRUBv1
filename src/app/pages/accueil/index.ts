@@ -134,7 +134,7 @@ export class IndexComponent {
     urlThumb: "assets/images/products/product-id-9.jpg",
     availability: true,
     description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-  },{
+  }/*,{
     id: 10,
     statut: "En vente",
     tag: "",
@@ -173,7 +173,7 @@ export class IndexComponent {
     urlThumb: "assets/images/products/product-id-12.jpg",
     availability: true,
     description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-  }];
+  }*/];
 
 
   private offresproducts: Product[] = [
@@ -216,7 +216,7 @@ export class IndexComponent {
     urlThumb: "assets/images/products/product-id-15.jpg",
     availability: true,
     description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-  },{
+  }/*,{
     id: 16,
     statut: "En vente",
     tag: "",
@@ -255,6 +255,6 @@ export class IndexComponent {
     urlThumb: "assets/images/products/product-id-18.jpg",
     availability: true,
     description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-  }];
+  }*/];
 }
 
