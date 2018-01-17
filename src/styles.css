@@ -57,6 +57,9 @@ Table of Contents
 26. Responsive 
 27. Helper Classes
 */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
 /*===================================================================================*/
 /*  Helper
 /*===================================================================================*/

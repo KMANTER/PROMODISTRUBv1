@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { Component } from '@angular/core';
+import {AuthService} from '../../services/authService'
 
 @Component({
   selector: 'app-header',
@@ -7,15 +7,10 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
-  @Input() isLoggedIn: boolean;  
-  private serviceAuth: AuthService;  
-  constructor(private auth: AuthService){
-    this.serviceAuth = auth;    
-    console.log("je suis connecté ? > "+auth.isAuth);
+  constructor(public authService: AuthService){
   }
-
-  private setSession() {
-    console.log("je me connecte");    
-    this.serviceAuth.isAuth = true;
+  ngOnInit() {
+    console.log("l'utilisateur est connecté ? "+ this.authService.isLoggedIn());
   }
+    
 }

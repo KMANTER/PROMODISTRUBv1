@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './services/auth.service';
+import { AuthService } from './services/authService';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,6 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'PROMODISTRUB';
-  private serviceAuth: AuthService;
   constructor(private auth: AuthService){
-    this.serviceAuth = auth;
   }
 }
