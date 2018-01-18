@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthService} from '../../services/authService'
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,12 @@ import {AuthService} from '../../services/authService'
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
+  options = [
+    'One',
+    'Two',
+    'Three'
+  ];
+  myControl: FormControl = new FormControl();  
   constructor(public authService: AuthService){
   }
   ngOnInit() {

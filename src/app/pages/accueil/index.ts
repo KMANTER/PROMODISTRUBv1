@@ -14,18 +14,18 @@ import { DataService } from '../../services/dataServices';
 export class IndexComponent {
   private offresproducts; products; specialsOffresproducts: Product[];
   searchTerm : FormControl = new FormControl();
-  
+  options = [
+    'One',
+    'Two',
+    'Three'
+  ];
   searchResult = [];
   constructor(private dataServices: DataService){
 
   }
   myControl: FormControl = new FormControl();
   
-    options = [
-      'One',
-      'Two',
-      'Three'
-    ];
+
   
     filteredOptions: Observable<string[]>;
   ngOnInit() {

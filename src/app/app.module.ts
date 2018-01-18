@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatAutocompleteModule, MatInputModule, MatOptionModule } from '@angular/material';
 import { OwlModule } from 'ngx-owl-carousel';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -27,12 +29,12 @@ const appRoutes: Routes = [
     LandingComponentComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    FormsModule,ReactiveFormsModule, OwlModule
+    FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,MatOptionModule
   ],
   providers: [DataService, AuthService],
   bootstrap: [AppComponent]
