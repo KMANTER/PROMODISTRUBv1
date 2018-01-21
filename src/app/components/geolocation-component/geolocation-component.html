@@ -1,0 +1,12 @@
+<div class="col-xs-12 col-md-6 top-geolocation-holder no-margin" >
+    <div class="geolocation-area">
+            <div class="control-group">
+                <i class="geoloc-icon material-icons" (click)="search(inputGeoLocation.value)">location_on</i>                                                                            
+                <mat-form-field class="geloc-input-field">                                
+                    <input matInput  placeholder="Ex: Paris" matInput [formControl]="inputGeoLocation" [matAutocomplete]="auto" />
+                </mat-form-field>  
+                <i class="geoloc-action-button material-icons" (click)="geolocate()">location_searching</i>                                                        
+            </div>
+            
+    </div>
+</div>

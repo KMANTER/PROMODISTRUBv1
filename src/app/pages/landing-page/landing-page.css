@@ -2,7 +2,7 @@ body{
     height: 987px;
 }
 .bloc-img-accueil{
-    background-image: url("../../assets/images/background-images/landing-background-img.jpg");
+    background-image: url("../../../assets/images/background-images/landing-background-img.jpg");
     height: 987px;
     background-repeat: no-repeat;  background-position: 50% 0;
     opacity:0.6;   

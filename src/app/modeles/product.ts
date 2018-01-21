@@ -1,3 +1,5 @@
+import { ProductSupplier } from "./productsupplier";
+
 export class Product {
   id: number;
   statut: string;
@@ -11,4 +13,5 @@ export class Product {
   availability: boolean;
   description: string;
   labelDiscount: string;
+  supplier: ProductSupplier;
 }

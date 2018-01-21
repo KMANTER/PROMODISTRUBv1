@@ -9,10 +9,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header';
 import { FooterComponent } from './components/footer/footer';
 import { CardComponent } from './components/component-card/card';
-import { IndexComponent } from './pages/accueil/index';
-import { LandingComponentComponent } from './landing-component/landing-component.component';
+import { IndexComponent } from './pages/index-page/index-page';
+import { LandingComponentComponent } from './pages/landing-page/landing-page';
+import { SearchServices } from './services/searchServices';
 import { DataService } from './services/dataServices';
 import { AuthService } from './services/authService';
+import { SearchComponent } from './components/search-component/search.component';
+import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: IndexComponent },
@@ -26,7 +29,9 @@ const appRoutes: Routes = [
     FooterComponent,
     CardComponent,
     IndexComponent,
-    LandingComponentComponent
+    LandingComponentComponent,
+    SearchComponent,
+    GeolocationComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,
@@ -36,7 +41,7 @@ const appRoutes: Routes = [
     ),
     FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,MatOptionModule
   ],
-  providers: [DataService, AuthService],
+  providers: [DataService, AuthService, SearchServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

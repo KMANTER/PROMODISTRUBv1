@@ -1,4 +1,5 @@
 import { Product } from '../modeles/product';
+import { ProductSupplier, AddressSupplier } from '../modeles/productsupplier';
 
 export const products: Product[] = [
   {
@@ -13,7 +14,11 @@ export const products: Product[] = [
   urlImage: "assets/images/products/product-id-1-poulet-roti.jpg",
   urlThumb: "assets/images/products/product-id-1-poulet-roti-thumb.jpg",
   availability: true,
-  description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
+  description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+  supplier:{
+    id:0,
+    address: {addressId:0,city:"Lille", lat:50.62925,long:3.05726}
+  }
 },
 {
   id: 2,
@@ -27,7 +32,12 @@ export const products: Product[] = [
   urlImage: "assets/images/products/product-id-2.jpg",
   urlThumb: "assets/images/products/product-id-2.jpg",
   availability: true,
-  description: "Poulet fermier d'Auvergne jaune Poulet fermier d'Auvergne. Poulet nourri sans OGM (<0,9%). Produit frais classe A. Prêt à cuire. Eviscéré sans abats."
+  description: "Poulet fermier d'Auvergne jaune Poulet fermier d'Auvergne. Poulet nourri sans OGM (<0,9%). Produit frais classe A. Prêt à cuire. Eviscéré sans abats.",
+  supplier: {
+    id:0,
+    address: {addressId:0,city:"Marseille", lat:43.29648,long:43.29648}
+  }
+  
 },
 {
   id: 3,
@@ -41,7 +51,11 @@ export const products: Product[] = [
   urlImage: "assets/images/products/product-id-3.jpg",
   urlThumb: "assets/images/products/product-id-3.jpg",
   availability: true,
-  description: "Manchons et ailerons de poulet, sirop de glucose, protéines de SOJA, amidon transformé de tapioca, sel, arôme naturel. 109 g de manchons et ailerons de poulet mis en oeuvre pour 100 g de wings party. Fabriqué dans un atelier qui utilise : gluten, lait, oeuf, céleri, moutarde"
+  description: "Manchons et ailerons de poulet, sirop de glucose, protéines de SOJA, amidon transformé de tapioca, sel, arôme naturel. 109 g de manchons et ailerons de poulet mis en oeuvre pour 100 g de wings party. Fabriqué dans un atelier qui utilise : gluten, lait, oeuf, céleri, moutarde",
+  supplier:  {
+    id:0,
+    address: {addressId:0,city:"Versailles", lat:48.80486,long:2.12036}
+  }
 },
 {
   id: 4,
@@ -55,7 +69,11 @@ export const products: Product[] = [
   urlImage: "assets/images/products/product-id-4.jpg",
   urlThumb: "assets/images/products/product-id-4.jpg",
   availability: false,
-  description: "Contact Exploitant / Service consommateur : LDC France LDC France BP 88 72308 Sablé-sur-Sarthe"
+  description: "Contact Exploitant / Service consommateur : LDC France LDC France BP 88 72308 Sablé-sur-Sarthe",
+  supplier:{
+    id:0,
+    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
+  }
 },
 {
   id: 5,
@@ -69,7 +87,11 @@ export const products: Product[] = [
   urlImage: "assets/images/products/product-id-5.jpg",
   urlThumb: "assets/images/products/product-id-5.jpg",
   availability: true,
-  description: "Magret de canard cru du Sud-Ouest Canard à foie gras du Sud-Ouest magret de canard gras"
+  description: "Magret de canard cru du Sud-Ouest Canard à foie gras du Sud-Ouest magret de canard gras",
+  supplier:  {
+    id:0,
+    address: {addressId:0,city:"Versailles", lat:48.80486,long:2.12036}
+  }
 },
 {
   id: 6,
@@ -83,10 +105,78 @@ export const products: Product[] = [
   urlImage: "assets/images/products/product-id-6.jpg",
   urlThumb: "assets/images/products/product-id-6.jpg",
   availability: false,
-  description: "SAUMON ATLANTIQUE BIO FUME 4 TRANCHES 120G"
-}
+  description: "SAUMON ATLANTIQUE BIO FUME 4 TRANCHES 120G",
+  supplier: {
+    id:0,
+    address: {addressId:0,city:"Caen", lat:49.18286,long:-0.37068}
+  }
+},{
+  id: 7,
+  statut: "En vente",
+  tag: "",
+  labelDiscount: "",    
+  name: "Chocolat en poudre",
+  mark: "le poulet",
+  price: "3,62€",
+  oldPrice: "4€",
+  urlImage: "assets/images/products/product-id-7.jpg",
+  urlThumb: "assets/images/products/product-id-7.jpg",
+  availability: true,
+  description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+  supplier: {
+    id:0,
+    address: {addressId:0,city:"Rouen", lat:49.44323,long:1.09997}
+  }
+  },{
+  id: 8,
+  statut: "En vente",
+  tag: "",
+  labelDiscount: "",    
+  name: "Café dosettes classique",
+  mark: "le poulet",
+  price: "2,89€",
+  oldPrice: "3.5€",
+  urlImage: "assets/images/products/product-id-8.jpg",
+  urlThumb: "assets/images/products/product-id-8.jpg",
+  availability: true,
+  description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+  supplier: {
+    id:0,
+    address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}
+  }
+  },
+{
+  id: 9,
+  statut: "En vente",
+  tag: "",
+  labelDiscount: "",    
+  name: "Thé 5 fruits rouges",
+  mark: "le poulet",
+  price: "1,75€",
+  oldPrice: "3€",
+  urlImage: "assets/images/products/product-id-9.jpg",
+  urlThumb: "assets/images/products/product-id-9.jpg",
+  availability: true,
+  description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+  supplier:  {
+    id:0,
+    address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
+  }
+  }
 ];
 
+export const suppliers: ProductSupplier[] = [
+  new ProductSupplier(1,new AddressSupplier(0,"Lille",50.62925,3.05726)),
+  new ProductSupplier(2,new AddressSupplier(0,"Paris",48.85661,2.35222)),
+  new ProductSupplier(3,new AddressSupplier(0,"Versailles",48.80486,2.12036)),
+  new ProductSupplier(4,new AddressSupplier(0,"Saint-Denis",48.93618,2.35744)),
+  new ProductSupplier(5,new AddressSupplier(0,"Marseille",43.29648,43.29648)),
+  new ProductSupplier(6,new AddressSupplier(0,"Caen",49.18286,-0.37068)),
+  new ProductSupplier(7,new AddressSupplier(0,"Rouen",49.44323,1.09997)),
+  new ProductSupplier(8,new AddressSupplier(0,"Le Mans",48.00611,0.19956)),
+  new ProductSupplier(9,new AddressSupplier(0,"Rennes",48.11727, -1.67779))
+]
+  /*
 export const specialsOffresproducts: Product[] = [
 {
 id: 7,
@@ -100,7 +190,8 @@ oldPrice: "4€",
 urlImage: "assets/images/products/product-id-7.jpg",
 urlThumb: "assets/images/products/product-id-7.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: this.suppliers[this.id]
 },{
 id: 8,
 statut: "En vente",
@@ -113,7 +204,8 @@ oldPrice: "3.5€",
 urlImage: "assets/images/products/product-id-8.jpg",
 urlThumb: "assets/images/products/product-id-8.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: this.suppliers[this.id]
 },{
 id: 9,
 statut: "En vente",
@@ -126,7 +218,8 @@ oldPrice: "3€",
 urlImage: "assets/images/products/product-id-9.jpg",
 urlThumb: "assets/images/products/product-id-9.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: this.suppliers[this.id]
 }/*,{
 id: 10,
 statut: "En vente",
@@ -166,9 +259,9 @@ urlImage: "assets/images/products/product-id-12.jpg",
 urlThumb: "assets/images/products/product-id-12.jpg",
 availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-}*/];
+}];*/
 
-
+/*
 export const offresproducts: Product[] = [
 {
 id: 13,
@@ -182,7 +275,8 @@ oldPrice: "4€",
 urlImage: "assets/images/products/product-id-13.jpg",
 urlThumb: "assets/images/products/product-id-13.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: this.suppliers[this.id]
 },{
 id: 14,
 statut: "En vente",
@@ -195,7 +289,8 @@ oldPrice: "3,58€",
 urlImage: "assets/images/products/product-id-14.jpg",
 urlThumb: "assets/images/products/product-id-14.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: this.suppliers[this.id]
 },{
 id: 15,
 statut: "En vente",
@@ -208,8 +303,9 @@ oldPrice: "3€",
 urlImage: "assets/images/products/product-id-15.jpg",
 urlThumb: "assets/images/products/product-id-15.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-}/*,{
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: this.suppliers[this.id]
+},{
 id: 16,
 statut: "En vente",
 tag: "",
@@ -248,4 +344,4 @@ urlImage: "assets/images/products/product-id-18.jpg",
 urlThumb: "assets/images/products/product-id-18.jpg",
 availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-}*/];
+}];*/

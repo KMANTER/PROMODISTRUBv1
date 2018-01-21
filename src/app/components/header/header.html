@@ -32,37 +32,6 @@
           </ul>
         </nav>
     </div>
-
-    <div class="col-xs-12 col-md-6 top-search-holder no-margin" *ngIf="authService.isLoggedIn()">
-        <div class="search-area">
-            <form class="example-form">
-                <div class="control-group">
-                    <mat-form-field class="search-field">                                
-                        <input matInput   placeholder="Cherchez.. viandes, Pains, Fruits" matInput [formControl]="myControl" [matAutocomplete]="auto" />
-                    </mat-form-field>                    
-                    
-                        <mat-autocomplete #auto="matAutocomplete">
-                                <mat-option *ngFor="let option of options" [value]="option">
-                                  {{ option }}
-                                </mat-option>
-                        </mat-autocomplete>
-                        <ul class="categories-filter animate-dropdown">
-                            <li class="dropdown">
-
-                                <a class="dropdown-toggle"  data-toggle="dropdown" href="category-grid.html">Toutes recherches</a>
-
-                                <ul class="dropdown-menu" role="menu" >
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Distributeur</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Catégorie</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Produit</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Marque</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    
-                    <a class="search-button" href="#" ></a>                
-                </div>
-            </form>
-        </div>
-    </div>
+    <search-component *ngIf="authService.isLoggedIn()"></search-component>   
+    <geolocation-component></geolocation-component>             
 </div><!-- /.container -->

@@ -8,12 +8,7 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
-  options = [
-    'One',
-    'Two',
-    'Three'
-  ];
-  myControl: FormControl = new FormControl();  
+
   constructor(public authService: AuthService){
   }
   ngOnInit() {

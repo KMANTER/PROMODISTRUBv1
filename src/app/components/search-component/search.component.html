@@ -1,0 +1,37 @@
+<div class="col-xs-12 col-md-6 top-search-holder no-margin" >
+  <div class="search-area">
+      <form class="example-form">
+          <div class="control-group">
+              <mat-form-field class="search-field">                                
+                  <input matInput  placeholder="Cherchez.. viandes, Pains, Fruits" matInput [formControl]="inputSearch" [matAutocomplete]="auto" />
+              </mat-form-field>                    
+              
+                  <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let word of searchWords" [value]="word" (click)="search(word)">
+                        <span [innerHTML]="highlight(word, inputSearch.value)"> {{ word }}</span>
+                       </mat-option> 
+                       <mat-option *ngFor="let product of filteredProducts | async" [value]="product.name" (click)="search(product.name)">
+                           <span [innerHTML]="highlight(product.name, inputSearch.value)"> {{ product.name }}</span>
+                        </mat-option>
+                        <hr>  
+                        <mat-option *ngFor="let product of filteredProducts | async" [value]="product" style="margin-bottom: 10px;">
+                            <div style="width: 20%; display: table-cell;">
+                                <img [src]="product.urlImage" />
+                            </div>
+                            <div style="width: 55%;display: table-cell;">
+                                    <label>{{product.name}}</label>
+                                    <span style="display: block;margin-top: -30px;">{{product.mark}}</span>
+                            </div>
+                            <div style=" width: 25%;display: table-cell;">
+                                    <span>{{product.price}}</span>
+                            </div>
+                         </mat-option>                                        
+                  </mat-autocomplete>
+                
+              
+              <a class="search-button" (click)="search(inputSearch.value)"></a>                
+          </div>
+      </form>
+  </div>
+  
+</div>

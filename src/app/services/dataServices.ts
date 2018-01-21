@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../modeles/product';
-import { offresproducts, products, specialsOffresproducts } from '../mocks/produits-mocks';
+import {  products } from '../mocks/produits-mocks';
 
 @Injectable()
 export class DataService {
@@ -10,9 +10,9 @@ export class DataService {
      return products;
    }
    getFeaturedProduct(): Product[]{
-    return offresproducts;
+    return null;
   }
-  getSpecialOffresProduct(): Product[]{
+ /* getSpecialOffresProduct(): Product[]{
     return specialsOffresproducts;
-  }
+  }*/
 }
