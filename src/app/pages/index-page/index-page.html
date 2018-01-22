@@ -848,6 +848,21 @@
                                  <div class="item"><img src="assets/images/sliders/slider-2.jpg" alt="XXXXXX"></div>-->
                                 
                        <!-- </div>-->
+                       <div class="col-xs-12 col-sm-9 col-md-12 no-margin">
+                        <section id="section-new-prod" class="carousel-holder hover small">
+                            <div class="title-nav">
+                                <h2 class="inverse">Nouveautés</h2>
+                            </div><!-- /.title-nav -->
+
+                            <div id="new-products" class="row">
+                                <div *ngFor="let p of newProducts" class="col-md-3 no-margin  product-item-holder hover">
+                                    <item-product-component [product]="p"></item-product-component>                                    
+                                </div><!-- /. -->
+                            </div>
+
+                        </section><!-- /.carousel-holder -->
+                        </div>
+
                         <section id="list-product">
                             <div class="grid-list-products" [hidden]="searchServices.allProducts === null">
                                 <h2 class="section-title">Produits</h2>
@@ -874,32 +889,8 @@
 
                                         <div class="product-grid-holder">
                                             <div class="row no-margin">
-                                                <div *ngFor="let product of searchServices.allProducts" class="col-xs-12 col-sm-4 no-margin product-item-holder hover">
-                                                    <div class="product-item">
-                                                        <div class="image">
-                                                            <img alt="" [src]="product.urlImage" />
-                                                        </div>
-                                                        <div class="body">
-                                                            <div class="label-discount clear"></div>
-                                                            <div class="title">
-                                                                <a href="#">{{product.name}}</a>
-                                                            </div>
-                                                            <div class="brand">{{product.mark}}</div>
-                                                        </div>
-                                                        <div class="prices">
-                                                            <div class="price-prev">{{product.price}}</div>
-                                                            <div class="price-current pull-right">{{product.oldPrice}}</div>
-                                                        </div>
-                                                        <div class="hover-area">
-                                                            <div class="add-cart-button">
-                                                                <a href="single-product.html" class="le-button">Ajouter au panier</a>
-                                                            </div>
-                                                            <div class="wish-compare">
-                                                                <a class="btn-add-to-wishlist" href="#">Ajouter au wishlist</a>
-                                                                <a class="btn-add-to-compare" href="#">Comparer</a>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.product-item -->
+                                                <div *ngFor="let p of searchServices.allProducts" class="col-xs-12 col-sm-4 no-margin product-item-holder hover">
+                                                    <item-product-component [product]="p"></item-product-component>
                                                 </div><!-- /.product-item-holder -->
 
                                             </div><!-- /.row -->

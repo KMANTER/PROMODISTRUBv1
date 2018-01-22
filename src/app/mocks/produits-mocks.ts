@@ -261,8 +261,8 @@ availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
 }];*/
 
-/*
-export const offresproducts: Product[] = [
+
+export const newProducts: Product[] = [
 {
 id: 13,
 statut: "En vente",
@@ -276,7 +276,10 @@ urlImage: "assets/images/products/product-id-13.jpg",
 urlThumb: "assets/images/products/product-id-13.jpg",
 availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: this.suppliers[this.id]
+supplier: {
+  id:0,
+  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
+}
 },{
 id: 14,
 statut: "En vente",
@@ -290,7 +293,10 @@ urlImage: "assets/images/products/product-id-14.jpg",
 urlThumb: "assets/images/products/product-id-14.jpg",
 availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: this.suppliers[this.id]
+supplier:{
+  id:0,
+  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
+}
 },{
 id: 15,
 statut: "En vente",
@@ -304,7 +310,10 @@ urlImage: "assets/images/products/product-id-15.jpg",
 urlThumb: "assets/images/products/product-id-15.jpg",
 availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: this.suppliers[this.id]
+supplier: {
+  id:0,
+  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
+}
 },{
 id: 16,
 statut: "En vente",
@@ -317,8 +326,12 @@ oldPrice: "4,57€",
 urlImage: "assets/images/products/product-id-16.jpg",
 urlThumb: "assets/images/products/product-id-16.jpg",
 availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-},{
+description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+supplier: {
+  id:0,
+  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
+}
+}/*,{
 id: 17,
 statut: "En vente",
 tag: "",
@@ -344,4 +357,4 @@ urlImage: "assets/images/products/product-id-18.jpg",
 urlThumb: "assets/images/products/product-id-18.jpg",
 availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-}];*/
+}*/];

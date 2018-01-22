@@ -1,0 +1,77 @@
+.product-item .ribbon span{
+    color: white;
+}
+.product-item image{
+  width: 150px;
+  height: 150px;
+}
+.product-item-holder .price-prev{
+  text-decoration: line-through;
+}
+
+.title-nav {
+    margin: 0 0 21px 0 !important; 
+  }
+
+.product-item img {
+      padding: 10px;
+      max-width: 70%; }
+.product-item-holder .ribbon {
+      top: 0; }
+.product-item .price-promo{
+  float: left;
+}
+.product-item .price-promo .act-price{
+  font-size: 15px;
+  color: #F27A24;
+  margin: 0 7px 5px 0;
+  width: 50%;
+}
+.product-item .price-promo .old-price{
+  font-size: 12px;
+  text-decoration: line-through;
+  width: 20%; 
+}
+.product-item .price{
+  float: left;
+  width: 40%;
+}
+.product-item .prod-price-details button{
+  color: #F27A24;
+  border-style: solid;
+  border-color: #F27A24;
+  border-radius: 5px;
+  border-width: 2px;
+}
+.product-item .prod-price-details button:hover{
+  color: #fff;
+  border-color: #fff;
+  background-color: #F27A24;
+}
+.product-item .item-button-show-prod{
+  float: right;
+  width: 55%;
+  padding: 1px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.product-item .details{
+  margin: 0px 5px 0px 5px;
+}
+.product-item .prod-price-details{
+  width: 100%;
+}
+.product-item .promo-timer{
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+.prod-name label{
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.prod-mark label{
+  font-size: 10px;
+}

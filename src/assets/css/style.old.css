@@ -1492,7 +1492,7 @@ header {
 .carousel-holder.hover {
   position: relative; }
   .carousel-holder.hover.small .size-small {
-    max-width: 134.7pt !important; }
+    max-width: 134.7pt }
     .carousel-holder.hover.small .size-small:hover .hover-area {
       bottom: 6px; }
 

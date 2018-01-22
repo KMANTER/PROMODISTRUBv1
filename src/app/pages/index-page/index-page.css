@@ -256,12 +256,7 @@
       font-size: 17px;
       font-weight: unset;
   }
-    .product-item .ribbon span{
-        color: white;
-    }
-    .product-item-holder .price-prev{
-      text-decoration: line-through;
-    }
+
 
     .item-button-pro, .item-button-dist{
       background-color: #f27a24d4;;
@@ -279,3 +274,16 @@
     .button-row{
       text-align: center;
     }
+    .product-item-holder{
+      margin-left: 5px;
+    }
+    #section-new-prod{
+      margin-top: 20px;
+    }
+    #new-products{
+      margin-left: 10px;
+    }
+    .product-item-holder{
+      max-width: 165.7pt !important;}
+    .product-item-holder {
+      min-height: 20pt !important; }

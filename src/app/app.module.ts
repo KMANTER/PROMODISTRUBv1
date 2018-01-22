@@ -16,7 +16,7 @@ import { DataService } from './services/dataServices';
 import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
-
+import {ItemProductComponent} from './components/item-product-component/item-product-component'
 const appRoutes: Routes = [
   { path: 'accueil', component: IndexComponent },
   { path: '',      component: LandingComponentComponent },
@@ -31,7 +31,8 @@ const appRoutes: Routes = [
     IndexComponent,
     LandingComponentComponent,
     SearchComponent,
-    GeolocationComponent
+    GeolocationComponent,
+    ItemProductComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,

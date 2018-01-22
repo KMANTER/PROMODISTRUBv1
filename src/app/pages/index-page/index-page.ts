@@ -13,7 +13,7 @@ import { SearchServices } from '../../services/searchServices';
   styleUrls: ['./index-page.css']
 })
 export class IndexComponent {
-  private offresproducts; products; specialsOffresproducts: Product[];
+  private newProducts; products; specialsOffresproducts: Product[];
   searchTerm : FormControl = new FormControl();
   options = [
     'One',
@@ -30,7 +30,7 @@ export class IndexComponent {
   
     filteredOptions: Observable<string[]>;
   ngOnInit() {
-    this.offresproducts = this.dataServices.getFeaturedProduct();
+    this.newProducts = this.dataServices.getNewProducts();
     //this.specialsOffresproducts = this.dataServices.getSpecialOffresProduct();
     this.filteredOptions = this.myControl.valueChanges
     .pipe(

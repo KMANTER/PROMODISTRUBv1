@@ -1,0 +1,40 @@
+<div class="product-item">
+    <div class="image">
+        <img alt="" [src]="product.urlImage" />
+    </div>
+    <div class="details">
+        <!--<div class="label-discount clear"></div>-->
+        <div class="prod-name"><label>{{product.name}}</label></div>
+        <div class="prod-mark"><label>{{product.mark}}</label></div>
+        <div class="prod-price-details">
+            <div class="price">
+                <div class="price-promo">
+                    <label class="act-price">{{product.price}}</label>
+                    <label class="old-price">{{product.oldPrice}}</label>
+                </div>
+                <div class="price-kg">1.50€/kg</div>
+            </div>
+            <button mat-button class="item-button-show-prod">VOIR LA PROMO</button>                                
+        </div>
+        <div class="promo-timer"><span>Il reste 2j 20h 56m </span></div>
+    </div>
+    <!--<div class="body">
+        <div class="title">
+            <a href="#">{{product.name}}</a>
+        </div>
+        <div class="brand">{{product.mark}}</div>
+    </div>
+    <div class="prices">
+        <div class="price-prev">{{product.price}}</div>
+        <div class="price-current pull-right">{{product.oldPrice}}</div>
+    </div>
+    <div class="hover-area">
+        <div class="add-cart-button">
+            <a href="single-product.html" class="le-button">Ajouter au panier</a>
+        </div>
+        <div class="wish-compare">
+            <a class="btn-add-to-wishlist" href="#">Ajouter au wishlist</a>
+            <a class="btn-add-to-compare" href="#">Comparer</a>
+        </div>
+    </div>-->
+</div><!-- /.product-item -->

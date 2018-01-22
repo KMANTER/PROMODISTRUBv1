@@ -952,19 +952,6 @@ header {
 #top-brands {
   padding: 0px 0 84px 0; }
 
-#recommended-products {
-  margin: 7px 0 -72px 0; }
-  #recommended-products .title-nav {
-    margin: 0 0 21px 0 !important; }
-  #recommended-products .size-medium {
-    min-height: 311px; }
-    #recommended-products .size-medium .image {
-      padding: 0px 0px 25px 0; }
-    #recommended-products .size-medium .ribbon {
-      top: 0; }
-    #recommended-products .size-medium .body {
-      min-height: 80px; }
-
 #grid-page-banner {
   margin: 18px 0 24px 0; }
 
