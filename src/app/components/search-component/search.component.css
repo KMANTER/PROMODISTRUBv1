@@ -22,7 +22,7 @@
      .top-search-holder .search-area {
       border: 3px solid #c6c6c6;
       border-radius: 7px;
-      margin: 20px 0 0 0; }
+     }
        .top-search-holder .search-area  .search-field, header .top-search-holder .search-area .search-button, header .top-search-holder .search-area .categories-filter {
         display: inline-block; }
        .top-search-holder .search-area .search-field {
@@ -44,10 +44,11 @@
         float: right;
         display: inline-block;
         text-align: center;
-        padding: 15px 15px 8px 15px;
-        margin: -3px -3px 0 0;
-        border-radius: 0 5px 5px 0; 
-        width: 10%
+        padding: 8px 8px 8px 8px;
+        margin: 0px 0px 0 0;
+        border-radius: 0 5px 5px 0;
+        width: 10%;
+        height: 42.5px;
         }
          .top-search-holder .search-area .search-button:hover {
           background-color: #939393; }

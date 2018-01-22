@@ -1,0 +1,37 @@
+<div class="container no-padding">
+    <div class="col-xs-12 col-md-3 logo-holder">
+        <!-- ============================================================= LOGO ============================================================= -->
+        <div class="logo">
+            <a href="index.html">
+            <img alt="logo" src="assets/images/logo-promo-dist.png" width="250" height="60"/>
+            </a>
+        </div><!-- /.logo -->
+        <!-- ============================================================= LOGO : END ============================================================= -->
+    </div><!-- /.logo-holder -->
+
+   
+    <div class="col-xs-12 col-md-9 wrap">
+        <nav>
+          <ul class="primary">
+            <li>
+              <a href="">Nos fournisseurs</a>
+            </li>
+            <li>
+              <a href="">Nos offres</a>
+            </li>
+            <li>
+              <a href="">Recettes</a> 
+            </li>
+            <li >
+              <a href="" style="border-right:none;">Qui sommes-nous?</a> 
+            </li>
+            <li style="float:right;border-left:1px solid #FFF; background-color: #63B1F4">
+                
+                <a href="/accueil" style="padding-top: 10px" (click)="authService.addSession('sedki')"><i class="material-icons" style="margin-right: 10px">account_circle</i> <span>Mon compte</span></a> 
+            </li>
+          </ul>
+        </nav>
+    </div>
+    <search-component *ngIf="authService.isLoggedIn()"></search-component>   
+    <geolocation-component></geolocation-component>             
+</div><!-- /.container -->

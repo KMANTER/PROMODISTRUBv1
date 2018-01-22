@@ -1,37 +1,32 @@
 <div class="container no-padding">
-    <div class="col-xs-12 col-md-3 logo-holder">
+  <div class="header-section" [ngClass]= "{'page-scroll-header': isScrolled}">
+    <div class="col-xs-12 col-md-2 logo-holder" style="padding:0 0 0 10px;">
         <!-- ============================================================= LOGO ============================================================= -->
         <div class="logo">
             <a href="index.html">
-            <img alt="logo" src="assets/images/logo-promo-dist.png" width="250" height="60"/>
+            <img alt="logo" src="assets/images/logo-promo-dist.png" width="200" height="35"/>
             </a>
         </div><!-- /.logo -->
         <!-- ============================================================= LOGO : END ============================================================= -->
     </div><!-- /.logo-holder -->
 
-   
-    <div class="col-xs-12 col-md-9 wrap">
-        <nav>
-          <ul class="primary">
-            <li>
-              <a href="">Nos fournisseurs</a>
-            </li>
-            <li>
-              <a href="">Nos offres</a>
-            </li>
-            <li>
-              <a href="">Recettes</a> 
-            </li>
-            <li >
-              <a href="" style="border-right:none;">Qui sommes-nous?</a> 
-            </li>
-            <li style="float:right;border-left:1px solid #FFF; background-color: #63B1F4">
-                
-                <a href="/accueil" style="padding-top: 10px" (click)="authService.addSession('sedki')"><i class="material-icons" style="margin-right: 10px">account_circle</i> <span>Mon compte</span></a> 
-            </li>
-          </ul>
-        </nav>
+    <div class="col-xs-12 col-md-2 nav-option">
+      <div class="col-xs-12 col-md-1 item-connect">
+          <i class="material-icons dp48" >perm_identity</i>                                                                                    
+          <div class="caption label-connect">Connectez-vous</div>
+      </div>
+      <div class="col-xs-12 col-md-1 item-basket">
+          <i class="material-icons dp48" >view_list</i>                                                                                    
+          <div class="caption label-my-list">Ma liste</div>
+      </div>
     </div>
-    <search-component *ngIf="authService.isLoggedIn()"></search-component>   
-    <geolocation-component></geolocation-component>             
+    <div class="col-xs-12 col-md-8 search-option" style="padding:0 0 0 20px;">
+      <div class="col-xs-12 col-md-8">
+        <search-component ></search-component> 
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <geolocation-component ></geolocation-component>   
+      </div>                
+    </div>
+  </div>
 </div><!-- /.container -->

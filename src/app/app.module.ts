@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteModule, MatInputModule, MatOptionModule } from '@angular/material';
+import {MatAutocompleteModule, MatInputModule, MatOptionModule, MatButtonModule } from '@angular/material';
 import { OwlModule } from 'ngx-owl-carousel';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -39,7 +39,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,MatOptionModule
+    FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,MatOptionModule, MatButtonModule
   ],
   providers: [DataService, AuthService, SearchServices],
   bootstrap: [AppComponent]

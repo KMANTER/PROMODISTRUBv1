@@ -31,7 +31,7 @@ export class IndexComponent {
     filteredOptions: Observable<string[]>;
   ngOnInit() {
     this.offresproducts = this.dataServices.getFeaturedProduct();
-    this.specialsOffresproducts = this.dataServices.getSpecialOffresProduct();
+    //this.specialsOffresproducts = this.dataServices.getSpecialOffresProduct();
     this.filteredOptions = this.myControl.valueChanges
     .pipe(
       startWith(''),
@@ -42,5 +42,6 @@ export class IndexComponent {
     return this.options.filter(option =>
       option.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
+
 }
 
