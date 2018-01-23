@@ -140,12 +140,8 @@ export const products: Product[] = [
   urlThumb: "assets/images/products/product-id-8.jpg",
   availability: true,
   description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-  supplier: {
-    id:0,
-    address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}
-  }
-  },
-{
+  supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}},
+  {
   id: 9,
   statut: "En vente",
   tag: "",
@@ -158,12 +154,8 @@ export const products: Product[] = [
   urlThumb: "assets/images/products/product-id-9.jpg",
   availability: true,
   description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-  supplier:  {
-    id:0,
-    address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
-  }
-  }
-];
+  supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}
+}];
 
 export const suppliers: ProductSupplier[] = [
   new ProductSupplier(1,new AddressSupplier(0,"Lille",50.62925,3.05726)),
@@ -261,6 +253,66 @@ availability: true,
 description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
 }];*/
 
+export const ventesFlashProducts: Product[] = [
+  {
+    id: 9,
+    statut: "En vente",
+    tag: "",
+    labelDiscount: "",    
+    name: "Thé 5 fruits rouges",
+    mark: "le poulet",
+    price: "1,75€",
+    oldPrice: "3€",
+    urlImage: "assets/images/products/product-id-9.jpg",
+    urlThumb: "assets/images/products/product-id-9.jpg",
+    availability: true,
+    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}
+    },{
+    id: 10,
+    statut: "En vente",
+    tag: "",
+    labelDiscount: "",    
+    name: "Lait concentré sucré",
+    mark: "le poulet",
+    price: "2,16€",
+    oldPrice: "4€",
+    urlImage: "assets/images/products/product-id-10.jpg",
+    urlThumb: "assets/images/products/product-id-10.jpg",
+    availability: true,
+    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}    
+    },
+  {
+    id: 17,
+    statut: "En vente",
+    tag: "",
+    labelDiscount: "",    
+    name: "Gel douche Bois des Tropiques",
+    mark: "le poulet",
+    price: "4,33€",
+    oldPrice: "4,33€",
+    urlImage: "assets/images/products/product-id-17.jpg",
+    urlThumb: "assets/images/products/product-id-17.jpg",
+    availability: true,
+    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}        
+    },{
+    id: 18,
+    statut: "En vente",
+    tag: "",
+    labelDiscount: "",    
+    name: "Déodorant Homme Nord Extrême Fraîcheur",
+    mark: "le poulet",
+    price: "3,83€",
+    oldPrice: "3,83€",
+    urlImage: "assets/images/products/product-id-18.jpg",
+    urlThumb: "assets/images/products/product-id-18.jpg",
+    availability: true,
+    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
+    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}            
+    }
+]
 
 export const newProducts: Product[] = [
 {

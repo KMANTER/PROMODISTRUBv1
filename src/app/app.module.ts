@@ -17,6 +17,8 @@ import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
 import {ItemProductComponent} from './components/item-product-component/item-product-component'
+import { SimpleTimer } from 'ng2-simple-timer';
+
 const appRoutes: Routes = [
   { path: 'accueil', component: IndexComponent },
   { path: '',      component: LandingComponentComponent },
@@ -42,7 +44,7 @@ const appRoutes: Routes = [
     ),
     FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,MatOptionModule, MatButtonModule
   ],
-  providers: [DataService, AuthService, SearchServices],
+  providers: [DataService, AuthService, SearchServices, SimpleTimer],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
