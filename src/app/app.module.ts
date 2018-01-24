@@ -17,6 +17,7 @@ import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
 import {ItemProductComponent} from './components/item-product-component/item-product-component'
+import {productDetailsComponent} from './components/product-details-component/product-details-component'
 import { SimpleTimer } from 'ng2-simple-timer';
 
 const appRoutes: Routes = [
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     LandingComponentComponent,
     SearchComponent,
     GeolocationComponent,
-    ItemProductComponent
+    ItemProductComponent,
+    productDetailsComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,

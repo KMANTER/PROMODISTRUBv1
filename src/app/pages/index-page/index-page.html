@@ -782,7 +782,9 @@
                     <!-- ========================================= SIDEBAR : END ========================================= -->
 
                     <!-- ========================================= CONTENT ========================================= -->
-                    <div class="col-xs-12 col-sm-9 no-margin wide sidebar">
+                    
+                    <!-- =========== Products liste ============ -->
+                    <div class="col-xs-12 col-sm-9 no-margin wide sidebar" [hidden]="true">
                         <div class="item" >
                             <div class="row">
                                 <div class="col-xs-12 col-md-12  titre-app">
@@ -970,6 +972,11 @@
                             </section><!-- /#gaming -->
                         </div>
                     </div><!-- /.col -->
+
+                    <!-- =========== Product Details ============ -->
+                    <div class="col-xs-12 col-sm-9 no-margin wide sidebar">
+                        <product-details-component></product-details-component>
+                    </div>
                     <!-- ========================================= CONTENT : END ========================================= -->
                 </div><!-- /.container -->
             </section><!-- /#category-grid -->
