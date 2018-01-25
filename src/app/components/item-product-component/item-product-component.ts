@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { Product } from '../../modeles/product';
 import {SimpleTimer} from 'ng2-simple-timer';
+import { SearchServices } from '../../services/searchServices';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'item-product-component',
@@ -20,7 +22,8 @@ export class ItemProductComponent implements OnInit {
   timerHourId: string;
   timerDayId: string;
   
-  constructor(private st: SimpleTimer) { 
+  constructor(private st: SimpleTimer, private searchServices: SearchServices,
+    private route: ActivatedRoute) { 
     
   }
 

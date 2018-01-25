@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../modeles/product';
 import { DataService } from './dataServices';
+import { ProductsListComponent } from '../components/products-list-component/products-list-component';
 
 @Injectable()
 export class SearchServices {
@@ -8,9 +9,12 @@ export class SearchServices {
   dataProducts: Product[];
   arraySearchWords: string[];
   static distanceMax: number = 50;
+  detailsProduit: Product;
   constructor(public dataServices: DataService) {
     this.allProducts = null;
+    this.detailsProduit = null;
   }
+
   searchProducts(searchWord: string): Product[]{
     var arraySearchWords: string[]= [];    
     var toReturn: any[]= [];
@@ -45,6 +49,11 @@ export class SearchServices {
       return element.name.toLocaleLowerCase().indexOf(val.toLocaleLowerCase()) !== -1;
     });
   }
+  getProductById(id: number): Product{
+    var indexOfProduct = this.dataServices.getAllProduct().findIndex(p => p.id === id);
+    return this.dataServices.getAllProduct()[indexOfProduct];
+  }
+
 
   public filterProductsByDistance(position: Position): void{
     if(!this.dataProducts){

@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy  } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { Product } from '../../modeles/product';
 import {SimpleTimer} from 'ng2-simple-timer';
+import { ActivatedRoute  } from '@angular/router';
+import {SearchServices} from '../../services/searchServices';
 
 @Component({
   selector: 'product-details-component',
@@ -9,8 +11,13 @@ import {SimpleTimer} from 'ng2-simple-timer';
   styleUrls: ['./product-details-component.css']
 })
 
-export class productDetailsComponent implements OnInit {
-  @Input() selectedProduct: Product;
+export  class productDetailsComponent implements OnInit, OnDestroy {
+ //id produit
+  id: number;
+  product: Product;
+  sub: any;
+  items1: number[] = [1, 2, 3, 4, 5];
+  
   counterSec = 60;
 	counterMin = 56;
 	counterHour = 20;
@@ -20,7 +27,8 @@ export class productDetailsComponent implements OnInit {
   timerHourId: string;
   timerDayId: string;
   
-  constructor(private st: SimpleTimer) { 
+  constructor(private st: SimpleTimer, private route: ActivatedRoute,
+    private searchServices: SearchServices) { 
     
   }
 
@@ -32,10 +40,18 @@ export class productDetailsComponent implements OnInit {
 		this.subscribeTimerSec();
 		this.subscribeTimerMin();
 		this.subscribeTimerHour();
-		this.subscribeTimerDay();
-    
-	}
+    this.subscribeTimerDay();
 
+    this.sub = this.route.params.subscribe(params => {
+      this.id = +params['id']; // (+) converts string 'id' to a number
+      this.product = this.searchServices.getProductById(this.id);
+      window.scrollTo(0, 0);
+    });
+
+  }
+  ngOnDestroy(){
+    this.sub.unsubscribe();
+  }
 	/*delAllTimer() {
 		this.st.delTimer('1sec');
 		this.st.delTimer('5sec');

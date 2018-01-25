@@ -17,12 +17,18 @@ import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
 import {ItemProductComponent} from './components/item-product-component/item-product-component'
-import {productDetailsComponent} from './components/product-details-component/product-details-component'
+import { productDetailsComponent } from './components/product-details-component/product-details-component'
+import { ProductsListComponent } from './components/products-list-component/products-list-component';
 import { SimpleTimer } from 'ng2-simple-timer';
 
 const appRoutes: Routes = [
-  { path: 'accueil', component: IndexComponent },
-  { path: '',      component: LandingComponentComponent },
+  { path: '', component: IndexComponent,
+  children: [
+
+    { path: 'accueil', component:  ProductsListComponent},
+    { path: 'produit/:id', component: productDetailsComponent }
+  ] }
+ // { path: '',component: LandingComponentComponent },
 ];
 
 @NgModule({
@@ -36,7 +42,8 @@ const appRoutes: Routes = [
     SearchComponent,
     GeolocationComponent,
     ItemProductComponent,
-    productDetailsComponent
+    productDetailsComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,

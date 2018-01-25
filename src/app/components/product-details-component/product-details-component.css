@@ -71,6 +71,7 @@
   #single-product .single-product-gallery-item img {
     width: 343px;
     max-width: 100% !important;
+    min-height: 230px;
    }
 #single-product .product-item-holder {
   border: none; }

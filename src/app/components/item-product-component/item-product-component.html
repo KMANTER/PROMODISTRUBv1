@@ -15,7 +15,7 @@
                 </div>
                 <div class="price-kg">1.50€/kg</div>
             </div>
-            <button mat-button class="item-button-show-prod">VOIR LA PROMO</button>                                
+            <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button>                                
         </div>
         <div class="promo-timer"><span>Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </span></div>
     </div>

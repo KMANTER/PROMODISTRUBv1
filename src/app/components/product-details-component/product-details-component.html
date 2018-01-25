@@ -1,29 +1,16 @@
 <div class="row navigation">
-    <button mat-fab class="back-btn"><i class="material-icons">keyboard_backspace</i></button>        
+    <button mat-fab class="back-btn" [routerLink]="['/accueil']"><i class="material-icons">keyboard_backspace</i></button>        
 </div>
 <div id="single-product" class="row">
   <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
     <div class="product-item-holder size-big single-product-gallery small-gallery">
-      <div id="owl-single-product" class="owl-carousel">
+      <owl-carousel [options]="{items:1,navigation: true, pagination: false, rewindNav : false}" >
         <div class="single-product-gallery-item" id="slide1">
           <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
-            <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
+            <img class="" [src]="product.urlImage"/>
           </a>
         </div>
-        <!-- /.single-product-gallery-item -->
-        <div class="single-product-gallery-item" id="slide2">
-          <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
-            <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
-          </a>
-        </div>
-        <!-- /.single-product-gallery-item -->
-        <div class="single-product-gallery-item" id="slide3">
-          <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
-            <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
-          </a>
-        </div>
-        <!-- /.single-product-gallery-item -->
-      </div>
+      </owl-carousel>
       <!-- /.single-product-slider -->
       <div class="single-product-gallery-thumbs gallery-thumbs">
         <div id="owl-single-product-thumbnails" class="owl-carousel">
@@ -75,11 +62,11 @@
       <div class="star-holder inline">
         <div class="star" data-score="4"></div>
       </div>
-      <div class="title"><a href="#">VAIO fit laptop - windows 8 SVF14322CXW</a></div>
-      <div class="brand">sony</div>
+      <div class="title"><a href="#">{{product.name}}</a></div>
+      <div class="brand">{{product.mark}}</div>
       <div class="prices">
-        <div class="price-current">$1740.00</div>
-        <div class="price-prev">$2199.00</div>
+        <div class="price-current">{{product.price}}</div>
+        <div class="price-prev">{{product.oldPrice}}</div>
       </div>
       <div class="">1.50 €/kg</div>  
       <div class=""><i class="material-icons">av_timer</i> Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </div>  
@@ -123,7 +110,7 @@
       <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
       <li><a href="#additional-info" data-toggle="tab">Informations utiles</a></li>
       <li><a href="#reviews" data-toggle="tab">Commentaires (3)</a></li>
-      <li><a href="#" data-toggle="tab">Suggestions de recette</a></li>      
+      <li><a href="#recettes" data-toggle="tab">Suggestions de recette</a></li>      
     </ul>
     <!-- /.nav-tabs -->
     <div class="tab-content">
@@ -149,51 +136,27 @@
       <div class="tab-pane" id="additional-info">
         <ul class="tabled-data">
           <li>
-            <label>weight</label>
+            <label>Poids</label>
             <div class="value">7.25 kg</div>
           </li>
           <li>
-            <label>dimensions</label>
+            <label>Dimensions</label>
             <div class="value">90x60x90 cm</div>
           </li>
           <li>
-            <label>size</label>
-            <div class="value">one size fits all</div>
+            <label>Taille</label>
+            <div class="value">X</div>
           </li>
           <li>
-            <label>color</label>
-            <div class="value">white</div>
+            <label>Couleur</label>
+            <div class="value">Blanc</div>
           </li>
           <li>
-            <label>guarantee</label>
-            <div class="value">5 years</div>
+            <label>garantie</label>
+            <div class="value">5 ans</div>
           </li>
         </ul>
-        <!-- /.tabled-data -->
-        <div class="meta-row">
-          <div class="inline">
-            <label>SKU:</label>
-            <span>54687621</span>
-          </div>
-          <!-- /.inline -->
-          <span class="seperator">/</span>
-          <div class="inline">
-            <label>categories:</label>
-            <span><a href="#">-50% sale</a>,</span>
-            <span><a href="#">gaming</a>,</span>
-            <span><a href="#">desktop PC</a></span>
-          </div>
-          <!-- /.inline -->
-          <span class="seperator">/</span>
-          <div class="inline">
-            <label>tag:</label>
-            <span><a href="#">fast</a>,</span>
-            <span><a href="#">gaming</a>,</span>
-            <span><a href="#">strong</a></span>
-          </div>
-          <!-- /.inline -->
-        </div>
-        <!-- /.meta-row -->
+
       </div>
       <!-- /.tab-pane #additional-info -->
       <div class="tab-pane" id="reviews">
@@ -308,11 +271,11 @@
         <div class="add-review row">
           <div class="col-sm-8 col-xs-12">
             <div class="new-review-form">
-              <h2>Add review</h2>
+              <h2>Ajouter un commentaire</h2>
               <form id="contact-form" class="contact-form" method="post" >
                 <div class="row field-row">
                   <div class="col-xs-12 col-sm-6">
-                    <label>name*</label>
+                    <label>Nom*</label>
                     <input class="le-input" >
                   </div>
                   <div class="col-xs-12 col-sm-6">
@@ -322,19 +285,19 @@
                 </div>
                 <!-- /.field-row -->
                 <div class="field-row star-row">
-                  <label>your rating</label>
+                  <label>Votre note</label>
                   <div class="star-holder">
                     <div class="star big" data-score="0"></div>
                   </div>
                 </div>
                 <!-- /.field-row -->
                 <div class="field-row">
-                  <label>your review</label>
+                  <label>Votre avis</label>
                   <textarea rows="8" class="le-input"></textarea>
                 </div>
                 <!-- /.field-row -->
                 <div class="buttons-holder">
-                  <button type="submit" class="le-button huge">submit</button>
+                  <button type="submit" class="le-button huge">Envoyer</button>
                 </div>
                 <!-- /.buttons-holder -->
               </form>
@@ -345,6 +308,10 @@
           <!-- /.col -->
         </div>
         <!-- /.add-review -->
+      </div>
+       <!-- /.tab-pane #additional-info -->
+      <div class="tab-pane" id="recettes">
+        ICI RECETTES
       </div>
       <!-- /.tab-pane #reviews -->
     </div>
