@@ -6,13 +6,13 @@
     <div class="product-item-holder size-big single-product-gallery small-gallery">
       <owl-carousel [options]="{items:1,navigation: true, pagination: false, rewindNav : false}" >
         <div class="single-product-gallery-item" id="slide1">
-          <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
+          <a href="#">
             <img class="" [src]="product.urlImage"/>
           </a>
         </div>
       </owl-carousel>
       <!-- /.single-product-slider -->
-      <div class="single-product-gallery-thumbs gallery-thumbs">
+     <!-- <div class="single-product-gallery-thumbs gallery-thumbs">
         <div id="owl-single-product-thumbnails" class="owl-carousel">
           <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="0" href="#slide1">
             <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
@@ -41,17 +41,17 @@
           <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
             <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
           </a>
-        </div>
-        <!-- /#owl-single-product-thumbnails -->
+        </div>-->
+        <!-- /#owl-single-product-thumbnails 
         <div class="nav-holder left hidden-xs">
           <a class="prev-btn slider-prev" data-target="#owl-single-product-thumbnails" href="#prev"></a>
-        </div>
-        <!-- /.nav-holder -->
+        </div>-->
+        <!-- /.nav-holder 
         <div class="nav-holder right hidden-xs">
           <a class="next-btn slider-next" data-target="#owl-single-product-thumbnails" href="#next"></a>
-        </div>
-        <!-- /.nav-holder -->
-      </div>
+        </div>-->
+        <!-- /.nav-holder
+      </div> -->
       <!-- /.gallery-thumbs -->
     </div>
     <!-- /.single-product-gallery -->
@@ -63,8 +63,10 @@
         <div class="star" data-score="4"></div>
       </div>
       <div class="title"><a href="#">{{product.name}}</a></div>
+      <div class="ref-produit"><label>Ref:</label><span>54687621</span></div>      
       <div class="brand">{{product.mark}}</div>
       <div class="prices">
+        <img class="" src="http://logos-vector.com/images/logo/xxl/1/1/7/117577/Metro_Cash_and_Carry_f75d4_450x450.png"/>
         <div class="price-current">{{product.price}}</div>
         <div class="price-prev">{{product.oldPrice}}</div>
       </div>
@@ -102,13 +104,13 @@
 <!-- /.body-holder -->
 </div>
 <!-- /.row #single-product -->
+<div>condition de vente</div>
 <!-- ========================================= SINGLE PRODUCT TAB ========================================= -->
 <section id="single-product-tab">
 <div class="no-container">
   <div class="tab-holder">
     <ul class="nav nav-tabs simple" >
       <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
-      <li><a href="#additional-info" data-toggle="tab">Informations utiles</a></li>
       <li><a href="#reviews" data-toggle="tab">Commentaires (3)</a></li>
       <li><a href="#recettes" data-toggle="tab">Suggestions de recette</a></li>      
     </ul>
@@ -118,14 +120,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet porttitor eros. Praesent quis diam placerat, accumsan velit interdum, accumsan orci. Nunc libero sem, elementum in semper in, sollicitudin vitae dolor. Etiam sed tempus nisl. Integer vel diam nulla. Suspendisse et aliquam est. Nulla molestie ante et tortor sollicitudin, at elementum odio lobortis. Pellentesque neque enim, feugiat in elit sed, pharetra tempus metus. Pellentesque non lorem nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         <p>Sed consequat orci vel rutrum blandit. Nam non leo vel risus cursus porta quis non nulla. Vestibulum vitae pellentesque nunc. In hac habitasse platea dictumst. Cras egestas, turpis a malesuada mollis, magna tortor scelerisque urna, in pellentesque diam tellus sit amet velit. Donec vel rhoncus nisi, eget placerat elit. Phasellus dignissim nisl vel lectus vehicula, eget vehicula nisl egestas. Duis pretium sed risus dapibus egestas. Nam lectus felis, sodales sit amet turpis se.</p>
         <div class="meta-row">
-          <div class="inline">
-            <label>Ref produit:</label>
-            <span>54687621</span>
-          </div>
           <!-- /.inline -->
-          <span class="seperator">/</span>
           <div class="inline">
-            <label>categories:</label>
+            <label>categorie:</label>
             <span><a href="#">test</a></span>
           </div>
           <!-- /.inline -->
@@ -133,32 +130,6 @@
         <!-- /.meta-row -->
       </div>
       <!-- /.tab-pane #description -->
-      <div class="tab-pane" id="additional-info">
-        <ul class="tabled-data">
-          <li>
-            <label>Poids</label>
-            <div class="value">7.25 kg</div>
-          </li>
-          <li>
-            <label>Dimensions</label>
-            <div class="value">90x60x90 cm</div>
-          </li>
-          <li>
-            <label>Taille</label>
-            <div class="value">X</div>
-          </li>
-          <li>
-            <label>Couleur</label>
-            <div class="value">Blanc</div>
-          </li>
-          <li>
-            <label>garantie</label>
-            <div class="value">5 ans</div>
-          </li>
-        </ul>
-
-      </div>
-      <!-- /.tab-pane #additional-info -->
       <div class="tab-pane" id="reviews">
         <div class="comments">
           <div class="comment-item">

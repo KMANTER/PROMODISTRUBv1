@@ -1,5 +1,6 @@
 export class ProductSupplier {
   id: number;
+  name: string;  
   address: AddressSupplier;
   constructor(id, address){
     this.id = id;

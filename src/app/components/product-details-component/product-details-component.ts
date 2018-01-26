@@ -17,7 +17,7 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   product: Product;
   sub: any;
   items1: number[] = [1, 2, 3, 4, 5];
-  
+  testimgFournisseur: string
   counterSec = 60;
 	counterMin = 56;
 	counterHour = 20;

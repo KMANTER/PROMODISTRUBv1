@@ -2,16 +2,24 @@ import { ProductSupplier } from "./productsupplier";
 
 export class Product {
   id: number;
-  statut: string;
-  tag: string;
   name: string;
+  mark: string;  
+  price: string;  
+  oldPrice: string;  
+  tva: string;
+  priceByUnit: string[]  
   urlImage: string;
   urlThumb: string;
-  mark: string;
-  price: string;
-  oldPrice: string;
-  availability: boolean;
-  description: string;
-  labelDiscount: string;
+  description: string[];
   supplier: ProductSupplier;
+  statut: string;
+  type: string;
+  endPromoDate: string;
+  category: string;
+  subCategory: string;
+  ProductConditioning: string[];
+  purchaseConditions:string[];
+  isNewProduct: boolean;
+  isFlashSale: boolean;
+  refProduit: string;
 }

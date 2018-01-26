@@ -24,7 +24,7 @@ import { SimpleTimer } from 'ng2-simple-timer';
 const appRoutes: Routes = [
   { path: '', component: IndexComponent,
   children: [
-
+    { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     { path: 'accueil', component:  ProductsListComponent},
     { path: 'produit/:id', component: productDetailsComponent }
   ] }

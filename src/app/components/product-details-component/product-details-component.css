@@ -42,6 +42,9 @@
       font-size: 10px;
       margin-bottom: 15px;
       border-bottom: 1px solid #e0e0e0; }
+      #single-product .body-holder .body .ref-produit{
+        font-size: 10px;        
+      }
   #single-product .body-holder .stButton .stFb, #single-product .body-holder .stButton .stTwbutton, #single-product .body-holder .stButton .stMainServices {
     height: 23px; }
   #single-product .body-holder .buttons-holder {
@@ -53,20 +56,34 @@
   #single-product .body-holder .price-current {
     font-size: 40px;
     font-weight: 700;
-    color: #28124A; }
+    color: #F27A24; }
   #single-product .body-holder .price-prev {
     font-size: 20px;
     font-weight: 600;
-    color: #e0e0e0;
     text-decoration: line-through;
     vertical-align: bottom;
     line-height: 40px;
     margin: 0 0 0 16px; 
   }
+  #single-product .body-holder .prices img{
+    max-width: 15%;
+    min-height: 49px;
+  }    
   #single-product .body-holder .qnt-holder {
     margin: 24px 0; }
   #single-product .body-holder #addto-cart {
-    margin: 0px 0 0 18px; }
+    margin: 0px 0 0 18px;
+    color: #F27A24;
+    border-style: solid;
+    border-color: #F27A24;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: #fff;
+   }
+   #single-product .body-holder #addto-cart:hover{
+    background-color: #F27A24;
+    color: #fff;    
+   }
 
   #single-product .single-product-gallery-item img {
     width: 343px;
