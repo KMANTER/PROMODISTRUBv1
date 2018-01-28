@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {OwlCarousel} from 'ng2-owl-carousel';
 import {Observable} from 'rxjs/Observable';
 import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
@@ -7,6 +8,7 @@ import { Product } from '../../modeles/product';
 import { DataService } from '../../services/dataServices';
 import { SearchServices } from '../../services/searchServices';
 import { ActivatedRoute } from '@angular/router';
+import { FiltersService } from '../../services/filtersService';
 
 @Component({
   selector: 'products-list-component',
@@ -15,6 +17,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ProductsListComponent implements OnInit {
+  @ViewChild('owlElementNewProd') owlElement: OwlCarousel;
+
   private newProducts; products; productsVentesFlash: Product[];
   searchResult = [];
   filteredOptions: Observable<string[]>;
@@ -28,8 +32,9 @@ export class ProductsListComponent implements OnInit {
 
   constructor(private dataServices: DataService, 
     private searchServices: SearchServices,
-    private route: ActivatedRoute){
-
+    private route: ActivatedRoute,
+    private filtersService: FiltersService){
+      
   }
   ngOnInit() {
     this.newProducts = this.dataServices.getNewProducts();
@@ -48,4 +53,8 @@ export class ProductsListComponent implements OnInit {
   ngOnDestroy() {
   }
 
+  next() {
+    this.owlElement.next([200]);
+    //duration 200ms
+  }
 }

@@ -1,10 +1,13 @@
+.product-item{
+  height: 290px;
+}
 .product-item .ribbon span{
     color: white;
 }
-.product-item image{
-  width: 150px;
-  height: 150px;
+.product-item image img{
+
 }
+
 .product-item-holder .price-prev{
   text-decoration: line-through;
 }
@@ -15,7 +18,13 @@
 
 .product-item img {
       padding: 10px;
-      max-width: 70%; }
+      max-width: 70%;
+      width: 130px;
+      height: 130px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+}
 .product-item-holder .ribbon {
       top: 0; }
 .product-item .price-promo{
@@ -25,12 +34,12 @@
   font-size: 15px;
   color: #F27A24;
   margin: 0 7px 5px 0;
-  width: 50%;
+  width: 100%;
 }
 .product-item .price-promo .old-price{
   font-size: 12px;
   text-decoration: line-through;
-  width: 20%; 
+  width: 100%; 
 }
 .product-item .price{
   float: left;
@@ -42,6 +51,9 @@
   border-color: #F27A24;
   border-radius: 5px;
   border-width: 2px;
+}
+.product-item .prod-price-details{
+  height: 40%;
 }
 .product-item .prod-price-details button:hover{
   color: #fff;
@@ -57,6 +69,8 @@
 }
 .product-item .details{
   margin: 0px 5px 0px 5px;
+  height: 60%;
+  text-align: left !important;
 }
 .product-item .prod-price-details{
   width: 100%;
@@ -65,6 +79,10 @@
   width: 100%;
   float: left;
   text-align: center;
+  height: 10%;
+}
+.prod-name{
+  height: 30%;
 }
 .prod-name label{
   color: black;
@@ -72,6 +90,9 @@
   font-size: 13px;
   margin-bottom: 0;
   height: 34px;
+}
+.prod-mark{
+  height: 20%;
 }
 .prod-mark label{
   font-size: 10px;

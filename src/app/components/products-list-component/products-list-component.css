@@ -140,7 +140,35 @@
 }
 #section-new-prod .product-item-holder, #section-vente-flash .product-item-holder{
   max-width: 165.7pt !important;
-  min-height: 20pt !important;}
+  min-height: 20pt !important;
+  max-height: 290px;
+}
+
 #list-product #grid-view .product-item-holder {
   max-width: 163.7pt !important;
   }
+
+  #new-products .nav-holder .next-btn {
+    right: 0; 
+  }
+    #new-products .nav-holder .next-btn:after {
+      content: '\f105';
+      font-family: fontawesome; 
+      font-size: 40px;
+    }
+    #new-products  .left{
+      float: left;
+    }
+    #new-products  .right{
+      float: right;
+    }
+      #new-products .nav-holder .prev-btn {
+    left: 0; 
+    height: 20px;
+    width: 20px;
+    }
+    #new-products .nav-holder .prev-btn:after {
+      content: '\f104';
+      font-family: fontawesome; 
+      font-size: 40px;
+    }

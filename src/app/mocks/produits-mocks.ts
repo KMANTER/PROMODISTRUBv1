@@ -1,7 +1,8 @@
 import { Product } from '../modeles/product';
 import { ProductSupplier, AddressSupplier } from '../modeles/productsupplier';
 
-export const products: Product[] = [
+export const products: Product[] =
+[
   {
   id: 1,
   name: "Pate à tartiner NUTELLA 2x3Kg",
@@ -12,7 +13,7 @@ export const products: Product[] = [
   priceByUnit: ["9,03€HT/Kg"],
   urlImage: "assets/images/products/product-id-1.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -26,7 +27,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 2,
@@ -38,7 +40,7 @@ export const products: Product[] = [
   priceByUnit: ["0,89 la pièce de 75g"],
   urlImage: "assets/images/products/product-id-2.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Promocash",
@@ -52,7 +54,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 3,
@@ -64,7 +67,7 @@ export const products: Product[] = [
   priceByUnit: ["9,50€HT/la  boite de 800g"],
   urlImage: "assets/images/products/product-id-3.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Promocash",
@@ -78,7 +81,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 4,
@@ -90,7 +94,7 @@ export const products: Product[] = [
   priceByUnit: ["6,99€HT le KG"],
   urlImage: "assets/images/products/product-id-4.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Davigel",
@@ -104,7 +108,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 5,
@@ -116,7 +121,7 @@ export const products: Product[] = [
   priceByUnit: ["2,27€HT/litre"],
   urlImage: "assets/images/products/product-id-5.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -130,7 +135,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 6,
@@ -142,7 +148,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-6.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Team Ouest",
@@ -156,7 +162,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 7,
@@ -168,7 +175,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-7.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -182,7 +189,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 8,
@@ -194,7 +202,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-8.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Deroche",
@@ -208,7 +216,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: true,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 9,
@@ -220,7 +229,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-9.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -234,7 +243,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 10,
@@ -246,7 +256,7 @@ export const products: Product[] = [
   priceByUnit: ["2,99 le Kg"],
   urlImage: "assets/images/products/product-id-10.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Avi-caux",
@@ -260,7 +270,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 11,
@@ -272,7 +283,7 @@ export const products: Product[] = [
   priceByUnit: ["par Kg"],
   urlImage: "assets/images/products/product-id-11.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -286,7 +297,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 12,
@@ -298,7 +310,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-12.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -312,7 +324,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 13,
@@ -324,7 +337,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-13.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -338,7 +351,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 14,
@@ -350,7 +364,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-14.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Office-dépôt",
@@ -364,7 +378,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 15,
@@ -376,7 +391,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-15.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -390,7 +405,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 16,
@@ -402,7 +418,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-16.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -416,7 +432,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: true
+  isFlashSale: true,
+  refProduit: ""
 },
 {
   id: 17,
@@ -493,7 +510,7 @@ export const products: Product[] = [
                 "Une excellente tenue de la crème fouettée sans affaissement ni exsudation"],
   supplier:{
     id:0,
-    name: "promocash",
+    name: "Promocash",
     address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
   },
   statut: "Promo",
@@ -551,7 +568,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-21.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -565,7 +582,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 22,
@@ -577,7 +595,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-22.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Metro",
@@ -591,7 +609,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 23,
@@ -603,7 +622,7 @@ export const products: Product[] = [
   priceByUnit: [""],
   urlImage: "assets/images/products/product-id-23.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Passionfroid",
@@ -617,19 +636,20 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 24,
   name: "ST MÔRET 150g",
-  mark: "ST MÔRET",
+  mark: "ST MORET",
   price: "0,99€HT",
   oldPrice: "1,49€HT",
   tva: "5,5%",
   priceByUnit: ["7,92€HT le kg"],
   urlImage: "assets/images/products/product-id-24.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Passionfroid",
@@ -643,7 +663,8 @@ export const products: Product[] = [
   ProductConditioning: [],
   purchaseConditions:[],
   isNewProduct: false,
-  isFlashSale: false
+  isFlashSale: false,
+  refProduit: ""
 },
 {
   id: 25,
@@ -655,7 +676,7 @@ export const products: Product[] = [
   priceByUnit: ["0,89 la pièce de 75g"],
   urlImage: "assets/images/products/product-id-25.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Davigel",
@@ -682,7 +703,7 @@ export const products: Product[] = [
   priceByUnit: ["8,34€HT/ kg"],
   urlImage: "assets/images/products/product-id-26.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Promocash",
@@ -709,7 +730,7 @@ export const products: Product[] = [
   priceByUnit: ["0,43€HT le litre"],
   urlImage: "assets/images/products/product-id-27.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Promocash",
@@ -736,7 +757,7 @@ export const products: Product[] = [
   priceByUnit: [],
   urlImage: "assets/images/products/product-id-28.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Passionfroid",
@@ -763,7 +784,7 @@ export const products: Product[] = [
   priceByUnit: [],
   urlImage: "assets/images/products/product-id-29.png",
   urlThumb: "",
-  description: "",
+  description: [""],
   supplier:{
     id:0,
     name: "Promocash",
@@ -779,290 +800,4 @@ export const products: Product[] = [
   isNewProduct: false,
   isFlashSale: false,
   refProduit: ""
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  id: 9,
-  statut: "En vente",
-  tag: "",
-  labelDiscount: "",    
-  name: "Thé 5 fruits rouges",
-  mark: "le poulet",
-  price: "1,75€",
-  oldPrice: "3€",
-  urlImage: "assets/images/products/product-id-9.jpg",
-  urlThumb: "assets/images/products/product-id-9.jpg",
-  availability: true,
-  description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-  supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}
 }];
-
-export const suppliers: ProductSupplier[] = [
-  new ProductSupplier(1,new AddressSupplier(0,"Lille",50.62925,3.05726)),
-  new ProductSupplier(2,new AddressSupplier(0,"Paris",48.85661,2.35222)),
-  new ProductSupplier(3,new AddressSupplier(0,"Versailles",48.80486,2.12036)),
-  new ProductSupplier(4,new AddressSupplier(0,"Saint-Denis",48.93618,2.35744)),
-  new ProductSupplier(5,new AddressSupplier(0,"Marseille",43.29648,43.29648)),
-  new ProductSupplier(6,new AddressSupplier(0,"Caen",49.18286,-0.37068)),
-  new ProductSupplier(7,new AddressSupplier(0,"Rouen",49.44323,1.09997)),
-  new ProductSupplier(8,new AddressSupplier(0,"Le Mans",48.00611,0.19956)),
-  new ProductSupplier(9,new AddressSupplier(0,"Rennes",48.11727, -1.67779))
-]
-  /*
-export const specialsOffresproducts: Product[] = [
-{
-id: 7,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Chocolat en poudre",
-mark: "le poulet",
-price: "3,62€",
-oldPrice: "4€",
-urlImage: "assets/images/products/product-id-7.jpg",
-urlThumb: "assets/images/products/product-id-7.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: this.suppliers[this.id]
-},{
-id: 8,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Café dosettes classique",
-mark: "le poulet",
-price: "2,89€",
-oldPrice: "3.5€",
-urlImage: "assets/images/products/product-id-8.jpg",
-urlThumb: "assets/images/products/product-id-8.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: this.suppliers[this.id]
-},{
-id: 9,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Thé 5 fruits rouges",
-mark: "le poulet",
-price: "1,75€",
-oldPrice: "3€",
-urlImage: "assets/images/products/product-id-9.jpg",
-urlThumb: "assets/images/products/product-id-9.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: this.suppliers[this.id]
-}/*,{
-id: 10,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Lait concentré sucré",
-mark: "le poulet",
-price: "2,16€",
-oldPrice: "4€",
-urlImage: "assets/images/products/product-id-10.jpg",
-urlThumb: "assets/images/products/product-id-10.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-},{
-id: 11,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Café soluble Viennois",
-mark: "le poulet",
-price: "4,09€",
-oldPrice: "5€",
-urlImage: "assets/images/products/product-id-11.jpg",
-urlThumb: "assets/images/products/product-id-11.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-},{
-id: 12,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Chocolat bio en poudre",
-mark: "le poulet",
-price: "3,99€",
-oldPrice: "4,5€",
-urlImage: "assets/images/products/product-id-12.jpg",
-urlThumb: "assets/images/products/product-id-12.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-}];*/
-
-export const ventesFlashProducts: Product[] = [
-  {
-    id: 9,
-    statut: "En vente",
-    tag: "",
-    labelDiscount: "",    
-    name: "Thé 5 fruits rouges",
-    mark: "le poulet",
-    price: "1,75€",
-    oldPrice: "3€",
-    urlImage: "assets/images/products/product-id-9.jpg",
-    urlThumb: "assets/images/products/product-id-9.jpg",
-    availability: true,
-    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}
-    },{
-    id: 10,
-    statut: "En vente",
-    tag: "",
-    labelDiscount: "",    
-    name: "Lait concentré sucré",
-    mark: "le poulet",
-    price: "2,16€",
-    oldPrice: "4€",
-    urlImage: "assets/images/products/product-id-10.jpg",
-    urlThumb: "assets/images/products/product-id-10.jpg",
-    availability: true,
-    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}    
-    },
-  {
-    id: 17,
-    statut: "En vente",
-    tag: "",
-    labelDiscount: "",    
-    name: "Gel douche Bois des Tropiques",
-    mark: "le poulet",
-    price: "4,33€",
-    oldPrice: "4,33€",
-    urlImage: "assets/images/products/product-id-17.jpg",
-    urlThumb: "assets/images/products/product-id-17.jpg",
-    availability: true,
-    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}        
-    },{
-    id: 18,
-    statut: "En vente",
-    tag: "",
-    labelDiscount: "",    
-    name: "Déodorant Homme Nord Extrême Fraîcheur",
-    mark: "le poulet",
-    price: "3,83€",
-    oldPrice: "3,83€",
-    urlImage: "assets/images/products/product-id-18.jpg",
-    urlThumb: "assets/images/products/product-id-18.jpg",
-    availability: true,
-    description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-    supplier: {id:0,address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}}            
-    }
-]
-
-export const newProducts: Product[] = [
-{
-id: 13,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Cire coiffante Shine Force",
-mark: "le poulet",
-price: "3,55€",
-oldPrice: "4€",
-urlImage: "assets/images/products/product-id-13.jpg",
-urlThumb: "assets/images/products/product-id-13.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: {
-  id:0,
-  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
-}
-},{
-id: 14,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Shampooing Classic",
-mark: "le poulet",
-price: "3,58€",
-oldPrice: "3,58€",
-urlImage: "assets/images/products/product-id-14.jpg",
-urlThumb: "assets/images/products/product-id-14.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier:{
-  id:0,
-  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
-}
-},{
-id: 15,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Shampooing ortie et citron",
-mark: "le poulet",
-price: "2,59€",
-oldPrice: "3€",
-urlImage: "assets/images/products/product-id-15.jpg",
-urlThumb: "assets/images/products/product-id-15.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: {
-  id:0,
-  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
-}
-},{
-id: 16,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Déodorant Dark Temptation",
-mark: "le poulet",
-price: "4,57€",
-oldPrice: "4,57€",
-urlImage: "assets/images/products/product-id-16.jpg",
-urlThumb: "assets/images/products/product-id-16.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten.",
-supplier: {
-  id:0,
-  address: {addressId:0,city:"Rennes", lat:48.11727,long:-1.67779}
-}
-}/*,{
-id: 17,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Gel douche Bois des Tropiques",
-mark: "le poulet",
-price: "4,33€",
-oldPrice: "4,33€",
-urlImage: "assets/images/products/product-id-17.jpg",
-urlThumb: "assets/images/products/product-id-17.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-},{
-id: 18,
-statut: "En vente",
-tag: "",
-labelDiscount: "",    
-name: "Déodorant Homme Nord Extrême Fraîcheur",
-mark: "le poulet",
-price: "3,83€",
-oldPrice: "3,83€",
-urlImage: "assets/images/products/product-id-18.jpg",
-urlThumb: "assets/images/products/product-id-18.jpg",
-availability: true,
-description: "Poulet rôti issu poulet certifié, épices. Présence de gluten."
-}*/];

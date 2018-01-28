@@ -1011,7 +1011,7 @@ header {
     border-radius: 0;
     width: 15px;
     height: 15px; }
-  .le-checkbox + .fake-box {
+  .filter-element > i {
     border-radius: 2px;
     display: inline-block;
     width: 10px;
@@ -1019,10 +1019,16 @@ header {
     margin: 0px 5px 0 0;
     vertical-align: middle;
     border: 1px solid #e0e0e0;
-    background-color: #fff; }
+     }
+  .filter-element > .fake-box-selected{
+    background-color: #F27A24;
+  }
+  .filter-element > .fake-box{
+    background-color: #fff;
+  }
   .le-checkbox:hover, .le-checkbox:focus {
     cursor: pointer; }
-    .le-checkbox:hover + .fake-box, .le-checkbox:focus + .fake-box {
+    .filter-element > .le-checkbox:hover + .fake-box, .filter-element > .le-checkbox:focus + .fake-box {
       background-color: #F9F9F9; }
 
 .le-select {
@@ -1622,7 +1628,7 @@ header {
 .owl-item.loading {
   min-height: inherit;
   background: none; }
-
+  
 #owl-recently-viewed .owl-wrapper-outer, #owl-recently-viewed .owl-stage-outer, #owl-recently-viewed-2 .owl-wrapper-outer, #owl-recently-viewed-2 .owl-stage-outer {
   width: 100.1%;
   padding-bottom: 70px; }
@@ -1774,7 +1780,9 @@ header {
   .product-item-holder .ribbon {
     position: absolute; }
   .product-item-holder .image {
-    text-align: center; }
+    text-align: center; 
+    height: 40%;
+  }
   .product-item-holder .prices {
     margin: 0 34px;
     padding: 11px 0; }
@@ -2801,18 +2809,28 @@ header {
   width: 77%; }
 .sidebar .price-filter {
   border-top: 1px solid #e0e0e0;
-  margin: 19px 0 0 0;
-  padding: 10px 0 0 0; }
+  padding: 60px 0 0 0; }
 .sidebar .price-range-holder {
   padding: 18px 0px 47px 0px;
   position: relative; }
-  .sidebar .price-range-holder .filter-button a {
-    text-transform: uppercase; }
-    .sidebar .price-range-holder .filter-button a:hover {
-      color: #3D3D3D; }
-  .sidebar .price-range-holder .min-max, .sidebar .price-range-holder .filter-button {
+
+  .sidebar .price-range-holder .min-max, .sidebar .filter-button {
     margin: 14px 0 0 0;
-    font-size: 13px; }
+    font-size: 13px; 
+  }
+  .sidebar  .filter-button:hover{
+    color: #fff;
+    border-color: #fff;
+    background-color: #F27A24;
+  }
+  .sidebar  .filter-button {
+    float: right; 
+    color: #F27A24;
+    border-style: solid;
+    border-color: #F27A24;
+    border-radius: 5px;
+    border-width: 2px;
+  }
   .sidebar .price-range-holder .price-slider {
     visibility: hidden; }
   .sidebar .price-range-holder .price-range.in {
@@ -2821,8 +2839,7 @@ header {
     margin-top: 55px; }
   .sidebar .price-range-holder .min-max {
     float: left; }
-  .sidebar .price-range-holder .filter-button {
-    float: right; }
+
 .sidebar .simple-banner {
   margin: 43px 0 34px 0; }
   .sidebar .simple-banner a {

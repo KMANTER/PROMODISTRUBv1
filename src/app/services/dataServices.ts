@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../modeles/product';
-import {  products, newProducts, ventesFlashProducts } from '../mocks/produits-mocks';
+import {  products} from '../mocks/produits-mocks';
 
 @Injectable()
 export class DataService {
@@ -10,12 +10,14 @@ export class DataService {
      return products;
    }
    getNewProducts(): Product[]{
-    return newProducts;
+    return products.filter((p:Product)=>{
+      return p.isNewProduct;
+    });
   }
   getProductsVentesFlash(): Product[]{
-    return ventesFlashProducts;
+    return products.filter((p:Product)=>{
+      return p.isFlashSale;
+    });
   }
- /* getSpecialOffresProduct(): Product[]{
-    return specialsOffresproducts;
-  }*/
+
 }

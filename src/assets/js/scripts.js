@@ -312,7 +312,7 @@
         }
 
         // Checkbox
-        if($('.le-checkbox').length>0){
+        if($('.ng-star-inserted > .le-checkbox').length>0){
             $('.le-checkbox').after('<i class="fake-box"></i>');
         }
 

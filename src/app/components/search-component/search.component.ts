@@ -43,7 +43,7 @@ export class SearchComponent implements OnInit {
     });
 }
 search(value: string){
-  this.searchServices.filterProducts(value);
+  this.searchServices.searchProductsByRequest(value);
 }
 
 

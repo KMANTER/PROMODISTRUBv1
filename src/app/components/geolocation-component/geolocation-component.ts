@@ -28,7 +28,7 @@ export class GeolocationComponent implements OnInit {
       var position = navigator.geolocation.getCurrentPosition((position)=>{
         console.log(position);
         this.displayLocation(position.coords.latitude,position.coords.longitude);
-        this.searchServices.filterProductsByDistance(position);
+        this.searchServices.addUserPostion(position);
       });
     } else {
         // No support

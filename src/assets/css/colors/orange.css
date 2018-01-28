@@ -30,7 +30,7 @@ h2, a, a:hover, a:focus, a:active, .primary-color, .le-color, .breadcrumb-nav-ho
   color: #F27A24 !important;
   border-color: #F27A24; }
 
-.le-checkbox:checked + .fake-box {
+ .le-checkbox:checked + .fake-box {
   background-color: #F27A24;
   border-color: #F27A24; }
 
