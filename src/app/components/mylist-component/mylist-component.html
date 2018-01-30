@@ -1,13 +1,43 @@
-<div class="wrapper">
-  
-  <header>
-      <app-header></app-header>
-  </header>
-      <body class="container-fluid" >
+<section id="cart-page">
+    <div class="container">
+        <!-- ========================================= CONTENT ========================================= -->
+        <div class="col-xs-12 col-md-9 items-holder no-margin">
+            <div *ngFor="let elementList of myList">
+                <div class="header-supplier"><label>{{elementList.supplier.name}}</label></div>
+                <div class="row no-margin cart-item" *ngFor="let elementProduct of elementList.products">
+                    <div class="col-xs-12 col-sm-2 no-margin">
+                        <a href="#" class="thumb-holder">
+                            <img class="lazy" alt="" [src]="elementProduct.product.urlImage" width="73" height="73"/>
+                        </a>
+                    </div>
 
-      </body>            
-  <app-footer></app-footer>
-  <!-- ========================================= MAIN : END ========================================= -->
-  </div><!-- /.wrapper -->
-  
-  
+                    <div class="col-xs-12 col-sm-5 ">
+                        <div class="title">
+                            <a href="#">{{elementProduct.product.name}}</a>
+                        </div>
+                        <div class="brand">{{elementProduct.product.refProduit}}</div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 no-margin">
+                        <div class="quantity">
+                            <div class="le-quantity">
+                                <form>
+                                    <a class="minus" href="#reduce"></a>
+                                    <input name="quantity" readonly="readonly" type="text" value="elementProduct.quantity" />
+                                    <a class="plus" href="#add"></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2 no-margin">
+                        <div class="price">
+                            {{elementProduct.product.price}}
+                        </div>
+                        <a class="close-btn" href="#"></a>
+                    </div>
+                </div><!-- /.cart-item -->
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/authService';
+import { MylistServices } from '../../services/myListService';
+import { MyListObject } from '../../modeles/mylistObject';
 
 @Component({
-  selector: 'mylist-page',
-  templateUrl: './mylist-page.html',
-  styleUrls: ['./mylist-page.css']
+  selector: 'mylist-component',
+  templateUrl: './mylist-component.html',
+  styleUrls: ['./mylist-component.css']
 })
-export class MylistPage {
-  constructor(public authService: AuthService){
+export class MylistComponent {
+  myList: MyListObject[];
+  constructor(private myListService: MylistServices){
   }
   ngOnInit() {
-
+    this.myList = this.myListService.myListOfProducts;
   }
 
 }

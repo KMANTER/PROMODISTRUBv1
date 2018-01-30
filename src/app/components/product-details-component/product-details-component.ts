@@ -4,6 +4,7 @@ import { Product } from '../../modeles/product';
 import {SimpleTimer} from 'ng2-simple-timer';
 import { ActivatedRoute  } from '@angular/router';
 import {SearchServices} from '../../services/searchServices';
+import { MylistServices } from '../../services/myListService';
 
 @Component({
   selector: 'product-details-component',
@@ -28,14 +29,16 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   timerDayId: string;
   
   constructor(private st: SimpleTimer, private route: ActivatedRoute,
-    private searchServices: SearchServices) { 
+    private searchServices: SearchServices, private mylistServices: MylistServices) { 
       this.sub = this.route.params.subscribe(params => {
         this.id = +params['id']; // (+) converts string 'id' to a number
         this.product = this.searchServices.getProductById(this.id);
         window.scrollTo(0, 0);
       });
   }
-
+  public addToMyList(p: Product){
+    this.mylistServices.addToMyList(p,1);
+  }
 	ngOnInit() {
 		this.st.newTimer('1sec',1);
 		this.st.newTimer('1min',60);

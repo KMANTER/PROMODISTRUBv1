@@ -10,13 +10,14 @@ import { HeaderComponent } from './components/header/header';
 import { FooterComponent } from './components/footer/footer';
 import { CardComponent } from './components/component-card/card';
 import { IndexComponent } from './pages/index-page/index-page';
-import { MylistPage } from './pages/mylist-page/mylist-page';
+import { MylistComponent } from './components/mylist-component/mylist-component';
 import { LandingComponentComponent } from './pages/landing-page/landing-page';
 import { SearchServices } from './services/searchServices';
 import { DataService } from './services/dataServices';
 import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
 import {FiltersService} from '../app/services/filtersService';
+import {MylistServices} from '../app/services/myListService';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
 import {ItemProductComponent} from './components/item-product-component/item-product-component'
 import { productDetailsComponent } from './components/product-details-component/product-details-component'
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     { path: 'accueil', component:  ProductsListComponent},
     { path: 'produit/:id', component: productDetailsComponent },
-    { path: 'maListe', component: MylistPage }
+    { path: 'maListe', component: MylistComponent }
   ] }
 ];
 
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     productDetailsComponent,
     ProductsListComponent,
     FiltersComponent,
-    MylistPage
+    MylistComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,
@@ -59,7 +60,7 @@ const appRoutes: Routes = [
     FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,
     MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule
   ],
-  providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService],
+  providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService, MylistServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

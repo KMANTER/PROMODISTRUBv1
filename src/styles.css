@@ -2048,69 +2048,6 @@ header {
       text-align: center;
       transition: 0.3s ease; }
 
-/*===================================================================================*/
-/*  Shopping Cart Page
-/*===================================================================================*/
-#cart-page {
-  margin-bottom: 76px; }
-  #cart-page .widget {
-    margin: 0 0 17px 0 !important;
-    padding-left: 40px; }
-    #cart-page .widget .body {
-      padding: 7px 0; }
-    #cart-page .widget .buttons-holder {
-      text-align: right; }
-      #cart-page .widget .buttons-holder .simple-link {
-        color: #3D3D3D;
-        margin: 10px 0;
-        font-size: 14px;
-        line-height: 24px; }
-    #cart-page .widget .tabled-data li label {
-      min-width: 125px; }
-    #cart-page .widget #total-price {
-      margin: 18px 0 0 0;
-      padding-bottom: 24px;
-      border-bottom: 0; }
-      #cart-page .widget #total-price .value {
-        font-weight: bold;
-        font-size: 25px;
-        line-height: 25px; }
-  #cart-page .items-holder {
-    margin: 14px 0 0 0; }
-    #cart-page .items-holder .close-btn {
-      display: inline-block;
-      position: absolute;
-      right: 1%;
-      top: 39%; }
-      #cart-page .items-holder .close-btn:after {
-        color: #3D3D3D;
-        content: '\f00d';
-        font-family: fontawesome; }
-    #cart-page .items-holder .cart-item {
-      border-bottom: 1px solid #e0e0e0;
-      padding: 27px 0 24px; }
-      #cart-page .items-holder .cart-item:first-child {
-        padding-top: 0; }
-      #cart-page .items-holder .cart-item:last-child {
-        border-bottom: 0; }
-      #cart-page .items-holder .cart-item .title {
-        padding: 17px 0 0 0; }
-        #cart-page .items-holder .cart-item .title a {
-          line-height: 15px;
-          font-size: 16px;
-          text-transform: capitalize;
-          font-weight: 700;
-          color: #0E53A5; }
-      #cart-page .items-holder .cart-item .brand {
-        font-size: 10px;
-        line-height: 27px; }
-      #cart-page .items-holder .cart-item .quantity {
-        margin: 11px 0 0 30px; }
-      #cart-page .items-holder .cart-item .price {
-        font-weight: 700;
-        font-size: 18px;
-        padding: 28px 0;
-        text-align: center; }
 
 /*===================================================================================*/
 /*  Checkout Page
