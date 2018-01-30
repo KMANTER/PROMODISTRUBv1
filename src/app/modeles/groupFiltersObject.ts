@@ -5,8 +5,8 @@ import { FilterGenericObject } from "./filterGenericObject";
 export class GroupFiltersObject {
   libellet: string;
   listFilters: FilterGenericObject[];
-  constructor(libellet: string){
+  constructor(libellet: string, listFilters?:FilterGenericObject[]){
     this.libellet = libellet;
-    this.listFilters = [];
+    this.listFilters = listFilters ? listFilters : [];
   }
 }

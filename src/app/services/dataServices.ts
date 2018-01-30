@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../modeles/product';
-import {  products} from '../mocks/produits-mocks';
+import { products, categories} from '../mocks/produits-mocks';
+import { Category } from '../modeles/category';
 
 @Injectable()
 export class DataService {
@@ -18,6 +19,9 @@ export class DataService {
     return products.filter((p:Product)=>{
       return p.isFlashSale;
     });
+  }
+  getAllCategories():Category[]{
+    return categories;
   }
 
 }

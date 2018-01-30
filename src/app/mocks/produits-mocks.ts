@@ -1,5 +1,60 @@
 import { Product } from '../modeles/product';
 import { ProductSupplier, AddressSupplier } from '../modeles/productsupplier';
+import { Category } from '../modeles/category';
+
+export const categories: Category[] =[{
+  name:"Charcuterie et produits traiteurs",
+  img:"assets/images/category/entree-charcuterie.png",
+  subCategories:[{name:"Charcuterie"},{name:"Traiteur"},{name:"Plats cuisinés"}]
+},{
+  name:"Produits de la mer", 
+  img:"assets/images/category/produit-de-la-mer.png",
+  subCategories:[{name:"Poisson"},{name:"Coquillages et crustacés"},{name:"Produits de la mer élaborés"}]
+},{
+  name:"Boucherie",  
+  img:"assets/images/category/viandes.png",
+  subCategories:[{name:"Bœuf"},{name:"Porc"},{name:"Veau"},{name:"Agneau"},{name:"Volaille"},{name:"Autres viandes"}]
+},{
+  name:"Fromages et produits laitiers",
+  img:"assets/images/category/fromages-produits-laitiers.png",
+  subCategories:[{name:"Fromage"},{name:"Fromage blanc et yaourt"},{name:"Beurre"},{name:"Crème"},{name:"Lait"},{name:"Œufs"}]
+},{
+  name:"Fruits, légumes et accompagnement", 
+  img:"assets/images/category/fruits-legumes.png",
+  subCategories:[{name:"Légumes"},{name:"Fruits"},{name:"Herbes et aromates"},{name:"Pomme de terre et Frites"}]
+},{
+  name:"Desserts et pâtisserie",
+  img:"assets/images/category/desserts.png",
+  subCategories:[{name:"Dessert prêt à consommer"},{name:"Ingrédients et préparations pour pâtisserie"}]
+},{
+  name:"Glaces",
+  img:"assets/images/category/glaces.png",
+  subCategories:[{name:"Glaces"},{name:"Sorbet"}]
+},{
+  name:"Boulangerie",
+  img:"assets/images/category/pains.png",
+  subCategories:[{name:"Pain"},{name:"Brioches et viennoiserie"},{name:"Farine et mix"}]
+},{
+  name:"Epicerie salée",
+  img:"assets/images/category/epicerie-salees.png",
+  subCategories:[{name:"Conserves"},{name:"Aromates et épices"},{name:"Pates et riz"},{name:"Huile, vinaigre et condiments"},{name:"Produits apéritifs"},{name:"Sauces, fonds et jus"}]
+},{
+  name:"Epicerie sucrée", 
+  img:"assets/images/category/epicerie-sucree.png",
+  subCategories:[{name:"Fruits secs et graines"},{name:"Café, thé, tisanes"},{name:"Les sucres"}, {name:"Le chocolat et pâtes à tartiner"},{name:"Les prêts à garnir"},{name:"Confiserie et biscuiterie"}]
+},{
+  name:"Boissons",  
+  img:"assets/images/category/boissons.png",
+  subCategories:[{name:"Vins"},{name:"Spiritueux"},{name:"Champagnes et effervescent"},{name:"Bière et cidres"},{name:"Softs, jus, sirop"},{name:"Eaux"}]
+},{
+  name:"Equipements",
+  img:"assets/images/category/equipement.png",
+  subCategories:[{name:"Equipement de cuisine"},{name:"Equipement hôtellerie"},{name:"Equipement et fourniture de bureau"}]
+},{
+  name:"Hygiène",  
+  img:"assets/images/category/hygiene.png",
+  subCategories:[{name:"Entretien et nettoyage"},{name:"Consommables"}]
+}];
 
 export const products: Product[] =
 [

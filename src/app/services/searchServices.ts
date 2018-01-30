@@ -9,6 +9,7 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class SearchServices {
+  searchActionOn: boolean;
   listFlashSellProducts: Product[];
   listNewProducts: Product[];
   listSearchProduct: Product[];
@@ -46,31 +47,44 @@ export class SearchServices {
     return toReturn;
   }
   public searchProductsByRequest(req: string){
-    var dataProducts: Product[] = this.userPosition ? this.listSearchProduct : this.dataServices.getAllProduct();
+    this.searchActionOn = true;
+    var dataProducts: Product[] = this.dataServices.getAllProduct();
     this.listSearchProduct = dataProducts.filter((p: Product)=>{
-      return p.name.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1 ||
-             p.supplier.name.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1;
+      if(this.userPosition){
+        return this.distanceFiltration(p) && (p.name.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1 || p.supplier.name.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1);
+      }else{
+        return (p.name.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1 || p.supplier.name.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1);  
+      }
     });
-    this.filtersService.initFiltersGroups(this.listSearchProduct);
+    this.filtersService.initFiltersGroups(this.listSearchProduct, true);
     this.filtersService.setListSearchProduct(this.listSearchProduct);   
 
   }
   public searchProductByCat(typeCat: string, req: string){
-    var dataProducts: Product[] = this.userPosition ? this.listSearchProduct : this.dataServices.getAllProduct();    
+    this.searchActionOn = true;
+    var dataProducts: Product[] = this.dataServices.getAllProduct();    
     switch(typeCat){
       case 'category':{
         this.listSearchProduct = dataProducts.filter((p: Product)=>{
-          return p.category.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1
+          if(this.userPosition){
+            return this.distanceFiltration(p) && p.category.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1;
+          }else{
+            return p.category.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1;  
+          }
         });
       }break;
       case 'subCategory':{
         this.listSearchProduct = dataProducts.filter((p: Product)=>{
-          return p.subCategory.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1
+          if(this.userPosition){
+            return this.distanceFiltration(p) && p.subCategory.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1;
+          }else{
+            return p.subCategory.toLocaleLowerCase().indexOf(req.toLocaleLowerCase()) !== -1;  
+          }
         });
       }break;
       default:break;
     }
-    this.filtersService.initFiltersGroups(this.listSearchProduct); 
+    this.filtersService.initFiltersGroups(this.listSearchProduct, true); 
     this.filtersService.setListSearchProduct(this.listSearchProduct);   
   }
   public getSearchWords(): string[]{
@@ -81,23 +95,28 @@ export class SearchServices {
     return this.dataServices.getAllProduct()[indexOfProduct];
   }
 
-
-  public filterListSearchProductsByPosition(): Promise<any>{
+  private distanceFiltration(product: Product): boolean{
+    return this.distance(product.supplier.address.lat,
+      product.supplier.address.long,
+      this.userPosition.coords.latitude,
+      this.userPosition.coords.longitude,
+      "K") <= SearchServices.distanceMax ;
+  }
+  /*public filterListSearchProductsByPosition(){
     var dataProducts = !this.listSearchProduct ? this.dataServices.getAllProduct() : this.listSearchProduct;      
-    return new Promise((resolve: any, reject: any): void => { 
-      this.listSearchProduct = dataProducts.filter((element: Product) =>{
+    this.listSearchProduct = dataProducts.filter((element: Product) =>{
       console.log(element.name+" "+element)
       return this.distance(element.supplier.address.lat,
                             element.supplier.address.long,
                             this.userPosition.coords.latitude,
                             this.userPosition.coords.longitude,
-                            "K") <= SearchServices.distanceMax ;
-    });
-  });
-  }
+                            "K") <= SearchServices.distanceMax ;});
+    this.filtersService.initFiltersGroups(this.listSearchProduct, true); 
+    this.filtersService.setListSearchProduct(this.listSearchProduct);   
+  }*/
   public addUserPostion(p: Position){
     this.userPosition = p;
-    this.filterListSearchProductsByPosition();
+    //this.filterListSearchProductsByPosition();
     this.updateCacheOfListProductsNewAndFlashSell();
   }
   public updateCacheOfListProductsNewAndFlashSell(){

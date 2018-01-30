@@ -9,7 +9,9 @@ export class FilterGenericObject {
   constructor(libellet: string, product: Product, isSelected?:boolean){
     this.libellet = libellet;
     this.count = 1;
-    this.listProducts.push(product);
+    if(product!=null){
+      this.listProducts.push(product);
+    }
     this.isSelected = isSelected ? isSelected : false;
   }
 }

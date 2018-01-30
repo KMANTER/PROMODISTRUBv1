@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteModule, MatInputModule, MatOptionModule, MatButtonModule,MatCheckboxModule } from '@angular/material';
+import {MatAutocompleteModule, MatInputModule, MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule } from '@angular/material';
 import { OwlModule } from 'ngx-owl-carousel';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header';
 import { FooterComponent } from './components/footer/footer';
 import { CardComponent } from './components/component-card/card';
 import { IndexComponent } from './pages/index-page/index-page';
+import { MylistPage } from './pages/mylist-page/mylist-page';
 import { LandingComponentComponent } from './pages/landing-page/landing-page';
 import { SearchServices } from './services/searchServices';
 import { DataService } from './services/dataServices';
@@ -28,9 +29,9 @@ const appRoutes: Routes = [
   children: [
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     { path: 'accueil', component:  ProductsListComponent},
-    { path: 'produit/:id', component: productDetailsComponent }
+    { path: 'produit/:id', component: productDetailsComponent },
+    { path: 'maListe', component: MylistPage }
   ] }
- // { path: '',component: LandingComponentComponent },
 ];
 
 @NgModule({
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     ItemProductComponent,
     productDetailsComponent,
     ProductsListComponent,
-    FiltersComponent
+    FiltersComponent,
+    MylistPage
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,
@@ -54,7 +56,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,MatOptionModule, MatButtonModule,MatCheckboxModule
+    FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,
+    MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule
   ],
   providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService],
   bootstrap: [AppComponent]

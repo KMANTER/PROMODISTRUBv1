@@ -27,7 +27,9 @@
           min-width: 0;
           width: 100%; }
         .sidemenu-holder .side-menu nav .nav > li .yamm-content {
-          padding: 10px 20px; }
+          padding: 10px 20px; 
+          height: 250px;
+        }
           .sidemenu-holder .side-menu nav .nav > li .yamm-content li {
             padding: 5px 0;
             border-bottom: 1px solid #e0e0e0;
@@ -41,7 +43,7 @@
               background-color: #F9F9F9; }
           .sidemenu-holder .side-menu nav .nav > li .yamm-content .dropdown-banner-holder {
             position: absolute;
-            right: -19px;
+            right: 50px;
             top: 0;
             clear: both; }
             .sidemenu-holder .side-menu nav .nav > li .yamm-content .dropdown-banner-holder a {

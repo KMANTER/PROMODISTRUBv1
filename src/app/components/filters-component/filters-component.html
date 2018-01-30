@@ -5,23 +5,22 @@
             <h2>{{filter.libellet}}</h2>
             <hr>
             <ul>
-                <li *ngFor="let itemFilter of filter.listFilters" class="filter-element" [hidden]="itemFilter.listProducts.length === 0">
+                <li *ngFor="let itemFilter of filter.listFilters" class="filter-element" [hidden]="itemFilter.listProducts.length === 0 && !itemFilter.isSelected">
                     <i [ngClass]="{'fake-box-selected': itemFilter.isSelected, 'fake-box': !itemFilter.isSelected}"></i>
                     <input [(ngModel)]="itemFilter.isSelected"  class="le-checkbox" type="checkbox" /> <label>{{itemFilter.libellet}}</label> <span class="pull-right">({{itemFilter.count}})</span></li>
             </ul>
         </div><!-- /.category-filter -->
         <button mat-button (click)="filtrer()" class="filter-button" >FILTRER</button> 
+
         <div class="price-filter">
             <h2>Prix</h2>
             <hr>
             <div class="price-range-holder">
-
-                <input type="text" class="price-slider" value="" >
-
+                <mat-slider class="example-margin" [max]="filtersService.maxPrice" [min]="minPrice" [step]="step" [(ngModel)]="filtersService.filterPriceValue" (input)="onInputChange($event)" ></mat-slider>
                 <span class="min-max">
-                    Prix: 8€ - 2899€
+                    {{minPrice}} € - {{filtersService.filterPriceValue}} €
                 </span>
-            </div>
+            </div> 
         </div><!-- /.price-filter -->
 
     </div><!-- /.body -->

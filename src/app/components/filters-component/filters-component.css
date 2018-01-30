@@ -1,0 +1,3 @@
+.price-range-holder >>> .mat-slider-horizontal{
+    min-width: 100% !important;
+}

@@ -1721,8 +1721,7 @@ header {
   position: relative; }
   .product-grid-holder .product-item-holder:last-child {
     border-right: 1px solid #ececec; }
-  .product-grid-holder .product-item-holder .image {
-    padding: 29px 0px 0 0; }
+
   .product-grid-holder .product-item-holder .prices {
     margin: 0 34px;
     padding: 11px 0; }
@@ -2838,7 +2837,9 @@ header {
   .sidebar .price-range-holder .slider .tooltip {
     margin-top: 55px; }
   .sidebar .price-range-holder .min-max {
-    float: left; }
+    float: left; 
+    width: 100%;
+    text-align: center;}
 
 .sidebar .simple-banner {
   margin: 43px 0 34px 0; }

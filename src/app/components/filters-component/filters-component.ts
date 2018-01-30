@@ -3,6 +3,7 @@ import {FormControl} from '@angular/forms';
 import {FiltersService} from '../../services/filtersService';
 import {Observable} from 'rxjs/Observable';
 import { GroupFiltersObject } from '../../modeles/groupFiltersObject';
+import { Product } from '../../modeles/product';
 
 @Component({
   selector: 'filters-component',
@@ -12,15 +13,24 @@ import { GroupFiltersObject } from '../../modeles/groupFiltersObject';
 export class FiltersComponent implements OnInit {
   inputSearch: FormControl = new FormControl();
   filtersLists: GroupFiltersObject[];
+  productsList: Product[];
   selected: boolean;
+  maxPrice = 100;
+  minPrice = 0;
+  step = 1;
+  priceValue = 0;
   constructor(private filtersService: FiltersService) { 
     this.selected = false;
   }
 
   filtrer(){
-    this.filtersService.updateFiltredProductList();
+      this.filtersService.updateFiltredProductList();
   }
   ngOnInit() {
     this.filtersLists = this.filtersService.filtersGroups;
   }
+  onInputChange(event: any) {
+    this.filtersService.isActivatedFilterPrice = true;
+  }
+  
 }

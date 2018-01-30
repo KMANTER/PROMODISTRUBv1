@@ -29,7 +29,11 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   
   constructor(private st: SimpleTimer, private route: ActivatedRoute,
     private searchServices: SearchServices) { 
-    
+      this.sub = this.route.params.subscribe(params => {
+        this.id = +params['id']; // (+) converts string 'id' to a number
+        this.product = this.searchServices.getProductById(this.id);
+        window.scrollTo(0, 0);
+      });
   }
 
 	ngOnInit() {
@@ -42,11 +46,7 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
 		this.subscribeTimerHour();
     this.subscribeTimerDay();
 
-    this.sub = this.route.params.subscribe(params => {
-      this.id = +params['id']; // (+) converts string 'id' to a number
-      this.product = this.searchServices.getProductById(this.id);
-      window.scrollTo(0, 0);
-    });
+
 
   }
   ngOnDestroy(){

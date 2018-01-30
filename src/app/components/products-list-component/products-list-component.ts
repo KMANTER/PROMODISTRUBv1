@@ -17,7 +17,8 @@ import { FiltersService } from '../../services/filtersService';
 })
 
 export class ProductsListComponent implements OnInit {
-  @ViewChild('owlElementNewProd') owlElement: OwlCarousel;
+  @ViewChild('owlElementNewProd') owlElementNewProd: OwlCarousel;
+  @ViewChild('owlElementVentesFlash') owlElementVFlash: OwlCarousel;
 
   private newProducts; products; productsVentesFlash: Product[];
   searchResult = [];
@@ -53,8 +54,19 @@ export class ProductsListComponent implements OnInit {
   ngOnDestroy() {
   }
 
-  next() {
-    this.owlElement.next([200]);
-    //duration 200ms
+  next(element: string) {
+    if(element === "Vflash")
+      this.owlElementVFlash.next([200]);
+    else if(element === "new")
+      this.owlElementNewProd.next([200]);
+  }
+  prev(element: string) {
+    if(element === "Vflash")
+      this.owlElementVFlash.previous([200]);
+    else if(element === "new")
+      this.owlElementNewProd.previous([200]);
+  }
+  getItemsCount(){
+    return this.filtersService.countAllActiveFilters === 0 && (this.searchServices.listSearchProduct) ? this.searchServices.listSearchProduct.length : this.filtersService.listFiltredProducts.length
   }
 }
