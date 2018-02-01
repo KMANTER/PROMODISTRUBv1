@@ -16,10 +16,10 @@ import { SearchServices } from './services/searchServices';
 import { DataService } from './services/dataServices';
 import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
-import {FiltersService} from '../app/services/filtersService';
-import {MylistServices} from '../app/services/myListService';
+import { FiltersService } from '../app/services/filtersService';
+import { MylistServices } from '../app/services/myListService';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
-import {ItemProductComponent} from './components/item-product-component/item-product-component'
+import { ItemProductComponent } from './components/item-product-component/item-product-component'
 import { productDetailsComponent } from './components/product-details-component/product-details-component'
 import { ProductsListComponent } from './components/products-list-component/products-list-component';
 import { FiltersComponent } from './components/filters-component/filters-component';

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef  } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {SearchServices} from '../../services/searchServices';
 import {Observable} from 'rxjs/Observable';
@@ -18,10 +18,13 @@ export class SearchComponent implements OnInit {
   inputSearch: FormControl = new FormControl();
   filteredProducts: Observable<Product[]>;  
   searchWords: string[];
-  constructor(private searchServices: SearchServices) { 
+  word: string;
+  constructor(private searchServices: SearchServices, public cdRef:ChangeDetectorRef) { 
 
   }
-
+  ngAfterViewInit() {
+    this.cdRef.detectChanges();
+  }
   ngOnInit() {
     this.filteredProducts = this.inputSearch.valueChanges
     .pipe(

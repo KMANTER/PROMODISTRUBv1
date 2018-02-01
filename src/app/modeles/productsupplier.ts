@@ -1,9 +1,30 @@
 export class ProductSupplier {
   id: number;
-  name: string;  
+  name: string;
+  description: string[];
+  deliveryRequirement: string[];
+  certifications: string[];
+  website: string[];
+  contactPerson: string[];
+  tel: string[];
+  callPriceBymin: string;
+  mail: string[];
+  img: string;  
   address: AddressSupplier;
-  constructor(id, address){
+  constructor(id: number, name: string, description:string[], deliveryRequirement:string[],
+     certifications: string[], website: string[], contactPerson: string[], tel: string[],
+      callPriceBymin: string, mail: string[], img: string, address){
     this.id = id;
+    this.name = name;
+    this.description = description;
+    this.deliveryRequirement = deliveryRequirement;
+    this.certifications = certifications;
+    this.website = website;
+    this.contactPerson = contactPerson;
+    this.tel = tel;
+    this.callPriceBymin = callPriceBymin;
+    this.mail = mail;
+    this.img = img;
     this.address = address;
   }
 }

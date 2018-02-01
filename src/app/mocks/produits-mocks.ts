@@ -69,11 +69,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-1.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Lille", lat:50.62925,long:3.05726}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "31/01/2018",
@@ -83,7 +91,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 2,
@@ -96,11 +104,17 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-2.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Promocash",
-    address: {addressId:0,city:"Marseille", lat:43.29648,long:43.29648}
-  },
+  supplier: new ProductSupplier(1,"Promocash",["<b>Promocash</b> est un multi-spécialiste de la distribution alimentaire avec une offre en produits frais, surgelés, épicerie, vins, brasserie et matériel professionnel à destination de plusieurs catégories de clientèle : les professionnels de la restauration et de l'hôtellerie, les cafés-bars, les revendeurs, les grands comptes, les associations, les collectivités.",
+                                            "Promocash propose une gamme complète de produits alimentaires et non alimentaires adaptée aux particularités des métiers de ses clients, comptant de 7 000 à 12 000 références. En quelques années, Promocash est devenu le plus grand réseau de Cash & Carry livreurs indépendants en France, avec 139 magasins répartis partout en France, de moins de 1 600 m² à 4 000 m² et 15 drives."]
+                                            ,["Livraison sur toute la France ","Montant minimum de livraison : 150€HT"]
+                                            ,[]
+                                            ,["www.promocash.com"]
+                                            ,[]
+                                            ,["02 32 10 76 10"]
+                                            ,"0,15"
+                                            ,[]
+                                            ,"assets/images/suppliers/promocash.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "31/01/2018",
@@ -110,7 +124,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 3,
@@ -123,11 +137,17 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-3.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Promocash",
-    address: {addressId:0,city:"Versailles", lat:48.80486,long:2.12036}
-  },
+  supplier: new ProductSupplier(1,"Promocash",["<b>Promocash</b> est un multi-spécialiste de la distribution alimentaire avec une offre en produits frais, surgelés, épicerie, vins, brasserie et matériel professionnel à destination de plusieurs catégories de clientèle : les professionnels de la restauration et de l'hôtellerie, les cafés-bars, les revendeurs, les grands comptes, les associations, les collectivités.",
+                                            "Promocash propose une gamme complète de produits alimentaires et non alimentaires adaptée aux particularités des métiers de ses clients, comptant de 7 000 à 12 000 références. En quelques années, Promocash est devenu le plus grand réseau de Cash & Carry livreurs indépendants en France, avec 139 magasins répartis partout en France, de moins de 1 600 m² à 4 000 m² et 15 drives."]
+                                            ,["Livraison sur toute la France ","Montant minimum de livraison : 150€HT"]
+                                            ,[]
+                                            ,["www.promocash.com"]
+                                            ,[]
+                                            ,["02 32 10 76 10"]
+                                            ,"0,15"
+                                            ,[]
+                                            ,"assets/images/suppliers/promocash.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "31/01/2018",
@@ -137,7 +157,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 4,
@@ -150,11 +170,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-4.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Davigel",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(3,"Davigel",[],[],[],["www.davigel.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(3,"Rouen",49.44323,1.09997)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "31/01/2018",
@@ -164,7 +180,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 5,
@@ -177,11 +193,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-5.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Versailles", lat:48.80486,long:2.12036}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "31/01/2018",
@@ -191,7 +215,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 6,
@@ -204,11 +228,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-6.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Team Ouest",
-    address: {addressId:0,city:"Caen", lat:49.18286,long:-0.37068}
-  },
+  supplier: new ProductSupplier(4,"Team Ouest",[],[],[],["www.team-ouest.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(4,"Caen",49.18286,-0.37068)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "31/01/2018",
@@ -218,7 +238,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 7,
@@ -231,11 +251,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-7.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Rouen", lat:49.44323,long:1.09997}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "31/01/2018",
@@ -245,7 +273,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 8,
@@ -258,11 +286,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-8.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Deroche",
-    address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}
-  },
+  supplier: new ProductSupplier(6,"Deroche",[],[],[],["www.deroche.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(6,"Le Mans",48.00611,0.19956)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "31/01/2018",
@@ -272,7 +296,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 9,
@@ -285,11 +309,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-9.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Le Mans", lat:48.00611,long:0.19956}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -299,7 +331,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 10,
@@ -312,11 +344,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-10.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Avi-caux",
-    address: {addressId:0,city:"Rouen", lat:49.44323,long:1.09997}
-  },
+  supplier: new ProductSupplier(7,"Avi-caux",[],[],[],["www.avi-caux.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(7,"Rouen",49.44323,1.09997)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "20/02/2018",
@@ -326,7 +354,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 11,
@@ -339,11 +367,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-11.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -353,7 +389,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 12,
@@ -366,11 +402,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-12.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -380,7 +424,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 13,
@@ -393,11 +437,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-13.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -407,7 +459,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 14,
@@ -420,11 +472,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-14.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Office-dépôt",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(8,"Office-dépôt",[],[],[],["www.office-depot.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(7,"Saint-Denis",48.93618,2.35744)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -434,7 +482,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 15,
@@ -447,11 +495,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-15.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -461,7 +517,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 16,
@@ -474,11 +530,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-16.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -488,7 +552,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 17,
@@ -502,11 +566,19 @@ export const products: Product[] =
   urlThumb: "",
   description: ["Idéal pour liaison instantanée et crème fouetté.","Maxi volume de sauce",
   "Liaison instantanée sans ajout de roux ou d’amidon","Tenue garantie en crème fouettée"],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -533,11 +605,19 @@ export const products: Product[] =
   "Economique : peu de pertes pour amener le produit 'à la nappe'",
   "Parfaite pour le travail en liaison froide (froid positif) : remise en température des plats sans déphasage",
   "Supporte parfaitement le bain-marie ou le maintien en température pour la liaison chaude."],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -563,11 +643,17 @@ export const products: Product[] =
                 "Une excellente stabilité à l’incorporation d’ingrédients acides ou d’alcool à chaud comme à froid : ne tranche pas",
                 "Un taux de foisonnement élevé et régulier toute l’année",
                 "Une excellente tenue de la crème fouettée sans affaissement ni exsudation"],
-  supplier:{
-    id:0,
-    name: "Promocash",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(1,"Promocash",["<b>Promocash</b> est un multi-spécialiste de la distribution alimentaire avec une offre en produits frais, surgelés, épicerie, vins, brasserie et matériel professionnel à destination de plusieurs catégories de clientèle : les professionnels de la restauration et de l'hôtellerie, les cafés-bars, les revendeurs, les grands comptes, les associations, les collectivités.",
+                                            "Promocash propose une gamme complète de produits alimentaires et non alimentaires adaptée aux particularités des métiers de ses clients, comptant de 7 000 à 12 000 références. En quelques années, Promocash est devenu le plus grand réseau de Cash & Carry livreurs indépendants en France, avec 139 magasins répartis partout en France, de moins de 1 600 m² à 4 000 m² et 15 drives."]
+                                            ,["Livraison sur toute la France ","Montant minimum de livraison : 150€HT"]
+                                            ,[]
+                                            ,["www.promocash.com"]
+                                            ,[]
+                                            ,["02 32 10 76 10"]
+                                            ,"0,15"
+                                            ,[]
+                                            ,"assets/images/suppliers/promocash.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -597,11 +683,7 @@ export const products: Product[] =
                 "Réduit vite et bien.",
                 "Excellente résistance aux températures élevées pour les cuissons longues type gratins",
                 "Une texture très lisse et onctueuse pour les appareils à crème prise"],
-  supplier:{
-    id:0,
-    name: "Team Ouest Normandie",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(5,"Team Ouest Normandie",[],[],[],["www.team-ouest-normandie.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(5,"Normandie",48.87987039999999,0.17125290000001314)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -624,11 +706,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-21.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -638,7 +728,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 22,
@@ -651,11 +741,19 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-22.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Metro",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(0,"Metro",["Depuis 1971 METRO accompagne au quotidien les restaurateurs et commerçants indépendants en France. Nous les suivons dans leur création d’entreprise, dans leur croissance, mais aussi dans leurs difficultés et leurs évolutions.",
+                                            "Pour les soutenir dans la mutation des exigences des consommateurs, nous nous engageons à :",
+                                            "<b>Créer des solutions au quotidien</b> en proposant des services et une expertise afin de permettre à nos clients de se concentrer sur leur cœur de métier.",
+                                            "<b>Construire et cultiver une relation de confiance et de proximité</b> en travaillant main dans la main avec eux et nos fournisseurs."]
+                                            ,["Livraison sur toute la France","Montant minimum de livraison : 150€HT"]
+                                            ,["Processus d’agréage certifiés ISO 9001","Entrepôts certifiés ISO 22000"]
+                                            ,["www.metro.fr"]
+                                            ,[]
+                                            ,["0825 09 09 09"]
+                                            ,"0,15"
+                                            ,["dirsto.nat@metro.fr"]
+                                            ,"assets/images/suppliers/metro.png"
+                                            , new AddressSupplier(0,"Lille",50.62925,3.05726)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -665,7 +763,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 23,
@@ -678,11 +776,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-23.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Passionfroid",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(9,"Passionfroid",[],[],[],["www.passionfroid.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(7,"Saint-Denis",48.93618,2.35744)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -692,7 +786,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 24,
@@ -705,11 +799,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-24.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Passionfroid",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(9,"Passionfroid",[],[],[],["www.passionfroid.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(7,"Saint-Denis",48.93618,2.35744)),
   statut: "Promo",
   type: "ambiant",
   endPromoDate: "20/02/2018",
@@ -719,7 +809,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 25,
@@ -732,11 +822,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-25.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Davigel",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(3,"Davigel",[],[],[],["www.davigel.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(3,"Rouen",49.44323,1.09997)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "20/02/2018",
@@ -746,7 +832,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 26,
@@ -759,11 +845,17 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-26.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Promocash",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(1,"Promocash",["<b>Promocash</b> est un multi-spécialiste de la distribution alimentaire avec une offre en produits frais, surgelés, épicerie, vins, brasserie et matériel professionnel à destination de plusieurs catégories de clientèle : les professionnels de la restauration et de l'hôtellerie, les cafés-bars, les revendeurs, les grands comptes, les associations, les collectivités.",
+                                            "Promocash propose une gamme complète de produits alimentaires et non alimentaires adaptée aux particularités des métiers de ses clients, comptant de 7 000 à 12 000 références. En quelques années, Promocash est devenu le plus grand réseau de Cash & Carry livreurs indépendants en France, avec 139 magasins répartis partout en France, de moins de 1 600 m² à 4 000 m² et 15 drives."]
+                                            ,["Livraison sur toute la France ","Montant minimum de livraison : 150€HT"]
+                                            ,[]
+                                            ,["www.promocash.com"]
+                                            ,[]
+                                            ,["02 32 10 76 10"]
+                                            ,"0,15"
+                                            ,[]
+                                            ,"assets/images/suppliers/promocash.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "20/02/2018",
@@ -773,7 +865,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 27,
@@ -786,11 +878,17 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-27.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Promocash",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(1,"Promocash",["<b>Promocash</b> est un multi-spécialiste de la distribution alimentaire avec une offre en produits frais, surgelés, épicerie, vins, brasserie et matériel professionnel à destination de plusieurs catégories de clientèle : les professionnels de la restauration et de l'hôtellerie, les cafés-bars, les revendeurs, les grands comptes, les associations, les collectivités.",
+                                            "Promocash propose une gamme complète de produits alimentaires et non alimentaires adaptée aux particularités des métiers de ses clients, comptant de 7 000 à 12 000 références. En quelques années, Promocash est devenu le plus grand réseau de Cash & Carry livreurs indépendants en France, avec 139 magasins répartis partout en France, de moins de 1 600 m² à 4 000 m² et 15 drives."]
+                                            ,["Livraison sur toute la France ","Montant minimum de livraison : 150€HT"]
+                                            ,[]
+                                            ,["www.promocash.com"]
+                                            ,[]
+                                            ,["02 32 10 76 10"]
+                                            ,"0,15"
+                                            ,[]
+                                            ,"assets/images/suppliers/promocash.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "20/02/2018",
@@ -800,7 +898,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 28,
@@ -813,11 +911,7 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-28.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Passionfroid",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(9,"Passionfroid",[],[],[],["www.passionfroid.com"],[],[],null,[],"assets/images/suppliers/no-photo.png", new AddressSupplier(7,"Saint-Denis",48.93618,2.35744)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "20/02/2018",
@@ -827,7 +921,7 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
 },
 {
   id: 29,
@@ -840,11 +934,17 @@ export const products: Product[] =
   urlImage: "assets/images/products/product-id-29.png",
   urlThumb: "",
   description: [""],
-  supplier:{
-    id:0,
-    name: "Promocash",
-    address: {addressId:0,city:"Saint-Denis", lat:48.93618,long:2.35744}
-  },
+  supplier: new ProductSupplier(1,"Promocash",["<b>Promocash</b> est un multi-spécialiste de la distribution alimentaire avec une offre en produits frais, surgelés, épicerie, vins, brasserie et matériel professionnel à destination de plusieurs catégories de clientèle : les professionnels de la restauration et de l'hôtellerie, les cafés-bars, les revendeurs, les grands comptes, les associations, les collectivités.",
+                                            "Promocash propose une gamme complète de produits alimentaires et non alimentaires adaptée aux particularités des métiers de ses clients, comptant de 7 000 à 12 000 références. En quelques années, Promocash est devenu le plus grand réseau de Cash & Carry livreurs indépendants en France, avec 139 magasins répartis partout en France, de moins de 1 600 m² à 4 000 m² et 15 drives."]
+                                            ,["Livraison sur toute la France ","Montant minimum de livraison : 150€HT"]
+                                            ,[]
+                                            ,["www.promocash.com"]
+                                            ,[]
+                                            ,["02 32 10 76 10"]
+                                            ,"0,15"
+                                            ,[]
+                                            ,"assets/images/suppliers/promocash.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
   statut: "Promo",
   type: "frais",
   endPromoDate: "20/02/2018",
@@ -854,5 +954,44 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: ""
+  refProduit: "ref12345678"
+},
+{
+  id: 30,
+  name: "Rillettes de poulet artisanale, pot 200gr",
+  mark: "Origine France",
+  price: "3,95€ HT",
+  oldPrice: "5,65€ HT",
+  tva: "5,5%",
+  priceByUnit: ["6,99€HT le KG"],
+  urlImage: "assets/images/products/product-id-4.png",
+  urlThumb: "",
+  description: ["Des délicieuses rillettes de poulet rôti réalisées à partir de poulets français élevés à la ferme du Colombier dans la plus pure tradition.  Une recette réussi à tartiner sur un pain encore tiède. Effilochées à la main, vos clients apprécieront le goût bien marqué du poulet."],
+  supplier: new ProductSupplier(2, "EARL DU COLOMBIER",["Installé sur la ferme familiale depuis plus de 25 ans, l'exploitation est composée de 60 ha de cultures et d'un atelier volailles de qualité.",
+                                            "Productions de la ferme : Cultures : blé, betteraves, lin, féveroles. Élevage : poulets, pintades, canards, dindes, oies, chapons, poulardes.",
+                                            "Les engagements du producteur : Alimentation fabriquée sur place, tracée sans OGM.",
+                                            "Durée d'élevage supérieur à 100 jours.",
+                                            "Abattage sur place dans un abattoir agréé CE (normes européennes).",
+                                            "Maîtrise de l'ensemble du cycle de production (cultures, alimentation, élevage, abattage et vente)."]
+                                            ,["Vente à la ferme, sur commande avant le jeudi midi",
+                                            "A venir chercher à a ferme pendant les horaires d’ouverture :",
+                                            "Vendredi: 9h30-12h et de 14h-18h30  et samedi: 9h30-12h Hors jours fériés."]
+                                            ,[]
+                                            ,["ferme-volaille-breaute.com"]
+                                            ,["Mr Laurent ANQUETIL"]
+                                            ,["0235384468", "0615925804"]
+                                            ,null
+                                            ,["anquetil.laurent76@orange.fr "]
+                                            ,"assets/images/suppliers/EARL-DU-COLOMBIER.png"
+                                            , new AddressSupplier(1,"Versailles",48.80486,2.12036)),
+  statut: "",
+  type: "frais",
+  endPromoDate: "05/02/2018",
+  category: "Charcuterie et produits traiteurs",
+  subCategory: "Charcuterie",
+  ProductConditioning: [],
+  purchaseConditions:[],
+  isNewProduct: false,
+  isFlashSale: false,
+  refProduit: "ref12345678"
 }];

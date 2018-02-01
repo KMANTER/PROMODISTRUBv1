@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnDestroy  } from '@angular/core';
+import {Location} from '@angular/common';
 import {FormControl} from '@angular/forms';
 import { Product } from '../../modeles/product';
 import {SimpleTimer} from 'ng2-simple-timer';
@@ -27,14 +28,19 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   timerMinId: string;
   timerHourId: string;
   timerDayId: string;
-  
+  isSupplTabActive: boolean;
+  isDescTabActive: boolean;
+  isRecetteTabActive: boolean;
   constructor(private st: SimpleTimer, private route: ActivatedRoute,
-    private searchServices: SearchServices, private mylistServices: MylistServices) { 
+    private searchServices: SearchServices, private mylistServices: MylistServices, private _location: Location) { 
       this.sub = this.route.params.subscribe(params => {
         this.id = +params['id']; // (+) converts string 'id' to a number
         this.product = this.searchServices.getProductById(this.id);
         window.scrollTo(0, 0);
       });
+      this.isSupplTabActive = false;
+      this.isDescTabActive = true;
+      this.isRecetteTabActive = false;
   }
   public addToMyList(p: Product){
     this.mylistServices.addToMyList(p,1);
@@ -128,5 +134,13 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
 
   }
   
-
+  public backPage(){
+    this._location.back();
+  }
+  scroll(element) {
+    this.isSupplTabActive = true;
+    this.isDescTabActive = false;
+    this.isRecetteTabActive = false;
+    window.scrollTo(element.getBoundingClientRect().x, element.getBoundingClientRect().y/2);
+}
 }

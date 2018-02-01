@@ -1,9 +1,21 @@
 <section id="cart-page">
     <div class="container">
+        <div class="row navigation">
+            <button mat-fab class="col-xs-12 col-sm-2 back-btn" (click)="backPage()"><i class="material-icons">keyboard_backspace</i></button>
+            <h1 class="col-xs-12 col-sm-8 maliste-page-title">MA LISTE DES COURSES</h1>        
+        </div>
         <!-- ========================================= CONTENT ========================================= -->
         <div class="col-xs-12 col-md-9 items-holder no-margin">
             <div *ngFor="let elementList of myList">
-                <div class="header-supplier"><label>{{elementList.supplier.name}}</label></div>
+                <div class="row header-supplier">
+                    <img class="col-xs-12 col-sm-2 no-margin" width="100" height="73" [src]="elementList.supplier.img"/>
+                    <div class="col-xs-12 col-sm-8 no-margin cart-info-supplier">
+                        <label>{{elementList.supplier.name}}</label>
+                        <div class="cart-icon-contact"><i class="material-icons" >message</i><i class="material-icons" >smartphone</i> <i class="material-icons" >call</i> <i class="material-icons" >email</i>                                                                                 
+                        </div>
+                    </div>
+                </div>
+                <hr>
                 <div class="row no-margin cart-item" *ngFor="let elementProduct of elementList.products">
                     <div class="col-xs-12 col-sm-2 no-margin">
                         <a href="#" class="thumb-holder">
@@ -22,9 +34,9 @@
                         <div class="quantity">
                             <div class="le-quantity">
                                 <form>
-                                    <a class="minus" href="#reduce"></a>
-                                    <input name="quantity" readonly="readonly" type="text" value="elementProduct.quantity" />
-                                    <a class="plus" href="#add"></a>
+                                    <a class="minus" (click)="decrementQuantity(elementProduct)"></a>
+                                    <input name="quantity" readonly="readonly" type="text" value="{{elementProduct.quantity}}" />
+                                    <a class="plus" (click)="incrementQuantity(elementProduct)"></a>
                                 </form>
                             </div>
                         </div>
@@ -37,6 +49,10 @@
                         <a class="close-btn" href="#"></a>
                     </div>
                 </div><!-- /.cart-item -->
+                <div class="row footer-supplier">
+                    <button mat-button ><i class="material-icons">print</i><span>Imprimer</span></button>
+                    <button mat-button ><i class="material-icons">file_download</i><span>PDF</span></button>
+                </div>
             </div>
         </div>
     </div>

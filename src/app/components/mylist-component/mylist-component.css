@@ -89,9 +89,13 @@ body{
             .le-quantity .minus {
               left: 0;
               border-right: 1px solid #e0e0e0; }
-              .le-quantity .minus:after {
+            .le-quantity .minus:after {
                 content: '\f068';
                 font-family: fontawesome; }
+            .le-quantity .minus:hover, .le-quantity .plus:hover{
+              color: #F27A24 !important;
+              cursor: pointer;
+            }
             .le-quantity .plus {
               border-left: 1px solid #e0e0e0;
               right: 0; }
@@ -105,3 +109,33 @@ body{
               color: #3D3D3D;
               font-size: 20px;
               background-color: #fff; }
+
+.header-supplier{
+  width: 100%;
+}
+.cart-info-supplier{
+  margin-left: 20px;
+}
+.cart-info-supplier label{
+  font-size: 27px;
+  font-weight: bold;
+}
+.cart-icon-contact i{
+  padding: 5px;
+}
+.cart-info-supplier .cart-icon-contact{
+}
+.footer-supplier {
+  float: right;
+}
+
+.back-btn{
+  background-color: #F27A24;
+  color: #fff;
+}
+.navigation{
+  padding: 1px 2px 5px 10px;
+}
+.maliste-page-title{
+  font-weight: bold; color: #F27A24; margin : 5px;
+}

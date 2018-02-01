@@ -16,11 +16,13 @@ export class SearchServices {
   listSearchWords: string[];
   static distanceMax: number = 50;
   private userPosition: Position;
+  public searchLabelText: string;
   constructor(public dataServices: DataService, private filtersService: FiltersService) {
     this.listSearchProduct = null;
     this.listFlashSellProducts = dataServices.getProductsVentesFlash();
     this.listNewProducts = dataServices.getNewProducts();
     this.userPosition = null;
+    this.searchLabelText = "";
   }
 
   searchProducts(searchWord: string): Product[]{
@@ -47,6 +49,7 @@ export class SearchServices {
     return toReturn;
   }
   public searchProductsByRequest(req: string){
+    this.searchLabelText = "Résultats de recherche pour `"+req+"`";  
     this.searchActionOn = true;
     var dataProducts: Product[] = this.dataServices.getAllProduct();
     this.listSearchProduct = dataProducts.filter((p: Product)=>{
@@ -61,8 +64,9 @@ export class SearchServices {
 
   }
   public searchProductByCat(typeCat: string, req: string){
+    this.searchLabelText = req;  
     this.searchActionOn = true;
-    var dataProducts: Product[] = this.dataServices.getAllProduct();    
+    var dataProducts: Product[] = this.dataServices.getAllProduct();  
     switch(typeCat){
       case 'category':{
         this.listSearchProduct = dataProducts.filter((p: Product)=>{

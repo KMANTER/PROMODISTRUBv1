@@ -15,11 +15,60 @@
   text-align: center;
   margin-bottom: 35px;
 }
+.info-supplier img{
+  width: 100%;
+  padding: 0 20px 0 20px;
+  max-height: 70px;
+}
+.info-supplier a{
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  color: #5D5D5D;
+}
+.info-supplier label{
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #F27A24;
+}
+.aide-question label{
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+}
+.aide-question .find-near-shop{
+  width: 100%;
+}
+.aide-question .find-near-shop label{
+  font-size: 12px;
+  color: #F27A24;
+}
+.detail-prod-supplier-contact .title{
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+.detail-prod-supplier-contact li{
+  width: 100%;
+  font-size: 12px;
+}
+.en-ligne-supplier a{
+  text-decoration: underline;
+  color: #5D5D5D;
+}
 #single-product .supplier-holder{
   width: 20%;
-  height: 400px;
+  height: 100%;
   background-color: #c6c6c6;
   border-radius: 3px;
+  padding: 5px;
+}
+.supplier-delivery-requirement h3, .supplier-certif h3{
+  color: black;
+  font-weight: bold;
 }
 #single-product .gallery-holder {
   width: 30%; }
@@ -66,7 +115,7 @@
     margin: 0 0 0 16px; 
   }
   #single-product .body-holder .prices img{
-    max-width: 15%;
+    max-width: 24%;
     min-height: 49px;
   }    
   #single-product .body-holder .qnt-holder {
