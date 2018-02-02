@@ -1,4 +1,4 @@
-<div class="product-item">
+<div class="product-item" *ngIf="gridMode">
     <div class="ribbon blue"><span>sale</span></div>        
     <div class="image">
         <img alt="" [src]="product.urlImage" />
@@ -10,32 +10,39 @@
         <div class="prod-price-details">
             <div class="price">
                 <div class="price-promo">
-                    <label class="act-price">{{product.price}}</label>
-                    <label class="old-price">{{product.oldPrice}}</label>
+                    <label class="act-price">{{product.price}}{{product.devise}}</label>
+                    <label class="old-price">{{product.oldPrice}}{{product.devise}}</label>
                 </div>
-                <div class="price-kg">1.50€/kg</div>
             </div>
-            <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button>                                
+            <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button> 
+            <div class="price-kg">{{product.priceByUnit[0]}}</div>                               
         </div>
         <div class="promo-timer"><span>Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </span></div>
     </div>
-    <!--<div class="body">
-        <div class="title">
-            <a href="#">{{product.name}}</a>
-        </div>
-        <div class="brand">{{product.mark}}</div>
-    </div>
-    <div class="prices">
-        <div class="price-prev">{{product.price}}</div>
-        <div class="price-current pull-right">{{product.oldPrice}}</div>
-    </div>
-    <div class="hover-area">
-        <div class="add-cart-button">
-            <a href="single-product.html" class="le-button">Ajouter au panier</a>
-        </div>
-        <div class="wish-compare">
-            <a class="btn-add-to-wishlist" href="#">Ajouter au wishlist</a>
-            <a class="btn-add-to-compare" href="#">Comparer</a>
-        </div>
-    </div>-->
 </div><!-- /.product-item -->
+<div *ngIf="!gridMode" class="list-view">
+    <div class="ribbon blue"><span>sale</span></div>        
+    <div class="row">
+        <div class="no-margin col-xs-12 col-sm-4 image-holder">
+            <div class="image">
+                <img alt="" [src]="product.urlImage"/>
+            </div>
+        </div><!-- /.image-holder -->
+        <div class="no-margin col-xs-12 col-sm-5 body-holder">
+            <div class="body">
+                <div class="label-discount orange"></div>
+                <div class="prod-name"><label>{{product.name}}</label></div>
+                <div class="prod-mark-list-view"><label>{{product.mark}}</label></div>
+                <div class="promo-timer-list-view"><span>Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </span></div>
+            </div>
+        </div><!-- /.body-holder -->
+        <div class="no-margin col-xs-12 col-sm-3 price-area">
+            <div class="right-clmn">
+                <div class="price-current">{{product.price}}{{product.devise}}</div>
+                <div class="price-prev">{{product.oldPrice}}{{product.devise}}</div>
+                <div class="price-unit" ><label >{{product.priceByUnit[0]}}</label></div>
+                <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button>                                
+            </div>
+        </div><!-- /.price-area -->
+    </div><!-- /.row -->
+</div>

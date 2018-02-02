@@ -38,7 +38,9 @@
               border-bottom: 0; }
             .sidemenu-holder .side-menu nav .nav > li .yamm-content li a {
               color: #636363;
-              line-height: 26px; }
+              line-height: 26px; 
+              cursor: pointer;
+            }
             .sidemenu-holder .side-menu nav .nav > li .yamm-content li:hover {
               background-color: #F9F9F9; }
           .sidemenu-holder .side-menu nav .nav > li .yamm-content .dropdown-banner-holder {

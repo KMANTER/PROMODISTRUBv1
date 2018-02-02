@@ -70,13 +70,18 @@
   .grid-list-products .control-bar {
     background-color: #F9F9F9;
     border-radius: 5px;
-    padding: 13px; }
+    height: 60px;
+    width: 100%;
+  }
     .grid-list-products .control-bar #popularity-sort {
       width: 190px;
       margin: 0 18px 0 0; }
   .grid-list-products .grid-list-buttons {
-    padding: 7px;
-    float: right; }
+    padding: 16px;
+    float: right; 
+    width: 25%;
+    text-align: right;
+  }
     .grid-list-products .grid-list-buttons ul li {
       min-width: 49px;
       margin: 0 23px 0 0; }
@@ -94,10 +99,11 @@
 .products-list {
   margin: 36px 0 27px 0; }
   .products-list .product-item {
-    min-height: 241px;
+    min-height: 150px;
     position: relative;
     border: 1px solid #e0e0e0;
-    border-bottom: 0; }
+    margin-bottom: 10px;
+  }
     .products-list .product-item:last-child {
       border-bottom: 1px solid #e0e0e0; }
     .products-list .product-item .row .image-holder {
@@ -184,8 +190,17 @@
       cursor: pointer;
     }
     .item-count{
-      width: 100px;
+      width: 30%;
       margin-right: 10px;
       float: left;
-      padding: 5px 16px 7px 5px;
+      padding: 16px;
+      height: 100%;
+    }
+    .sort-by{
+      width: 40%;
+      float: left;
+      height: 100%;
+    }
+    .panel-sort-by-style{
+      background-color: #F27A24;
     }

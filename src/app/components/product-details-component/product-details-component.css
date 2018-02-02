@@ -25,6 +25,8 @@
   font-weight: bold;
   font-size: 12px;
   color: #5D5D5D;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .info-supplier label{
   width: 100%;
@@ -58,6 +60,7 @@
 .en-ligne-supplier a{
   text-decoration: underline;
   color: #5D5D5D;
+  cursor: pointer;
 }
 #single-product .supplier-holder{
   width: 20%;
@@ -128,6 +131,7 @@
     border-radius: 5px;
     border-width: 2px;
     background-color: #fff;
+    cursor: pointer;
    }
    #single-product .body-holder #addto-cart:hover{
     background-color: #F27A24;

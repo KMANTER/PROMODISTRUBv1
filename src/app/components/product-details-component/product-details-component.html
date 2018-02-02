@@ -25,17 +25,17 @@
       <div class="brand">{{product.mark}}</div>
       <div class="prices">
         <img class="" [src]="product.supplier.img"/>
-        <div class="price-current">{{product.price}}</div>
-        <div class="price-prev">{{product.oldPrice}}</div>
+        <div class="price-current">{{product.price}}{{product.devise}}</div>
+        <div class="price-prev">{{product.oldPrice}}{{product.devise}}</div>
       </div>
       <div class="">1.50 €/kg</div>  
       <div class=""><i class="material-icons">av_timer</i> Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </div>  
       <div class="qnt-holder">
         <div class="le-quantity">
           <form>
-            <a class="minus" href="#reduce"></a>
-            <input name="quantity" readonly="readonly" type="text" value="1" />
-            <a class="plus" href="#add"></a>
+            <a class="minus" (click)="decrQty()"></a>
+            <input name="quantity" readonly="readonly" type="text" [(ngModel)]="quantity" />
+            <a class="plus" (click)="incrQty()"></a>
           </form>
         </div>
         <a id="addto-cart" (click)="addToMyList(product)" class="le-button huge">Ajouter à liste de course</a>

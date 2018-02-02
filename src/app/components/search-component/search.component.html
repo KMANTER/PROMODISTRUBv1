@@ -14,17 +14,17 @@
                            <span [innerHTML]="highlight(product.name, inputSearch.value)"> {{ product.name }}</span>
                         </mat-option>
                         <hr>  
-                        <mat-option *ngFor="let product of filteredProducts | async" [value]="product" style="margin-bottom: 10px;">
-                            <div style="width: 20%; display: table-cell;">
-                                <img [src]="product.urlImage" />
-                            </div>
-                            <div style="width: 55%;display: table-cell;">
-                                    <label>{{product.name}}</label>
-                                    <span style="display: block;margin-top: -30px;">{{product.mark}}</span>
-                            </div>
-                            <div style=" width: 25%;display: table-cell;">
-                                    <span>{{product.price}}</span>
-                            </div>
+                        <mat-option *ngFor="let product of filteredProducts | async" [routerLink]="['/produit',product.id]" [value]="product.name" style="min-height: 70px;padding:0;" >
+                                <div class="item-product-img">
+                                    <img [src]="product.urlImage" />
+                                </div>
+                                <div class="item-product-name-mark">
+                                        <h5>{{product.name}}</h5>
+                                        <h6>{{product.mark}}</h6>
+                                </div>
+                                <div class="item-product-price">
+                                    <label>{{product.price}}{{product.devise}}</label>
+                                </div>
                          </mat-option>                                        
                   </mat-autocomplete>
                 

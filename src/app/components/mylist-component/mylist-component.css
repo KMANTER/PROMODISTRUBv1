@@ -35,9 +35,11 @@ body{
         display: inline-block;
         position: absolute;
         right: 1%;
-        top: 39%; }
+        top: 39%; 
+        cursor: pointer;
+      }
         #cart-page .items-holder .close-btn:after {
-          color: #3D3D3D;
+          color: #F27A24;
           content: '\f00d';
           font-family: fontawesome; }
       #cart-page .items-holder .cart-item {

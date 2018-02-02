@@ -20,6 +20,15 @@
       margin-right: auto;
       display: block;
 }
+.list-view img {
+  padding: 10px;
+  max-width: 70%;
+  width: 130px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .product-item-holder .ribbon {
       top: 0; }
 .product-item .price-promo{
@@ -76,19 +85,64 @@
   text-align: center;
   height: 10%;
 }
+.list-view .promo-timer{
+  width: 100%;
+  float: left;
+  height: 10%;
+}
 .prod-name{
   height: 30%;
 }
-.prod-name label{
-  color: black;
+.prod-mark-list-view label{
+  color: #5D5D5D;
   font-weight: bold;
-  font-size: 13px;
-  margin-bottom: 0;
+  font-size: 10px;
   height: 34px;
+}
+.promo-timer-list-view{
+  color: #63B1F4;
+  font-weight: bold;
+  font-size: 18px;
 }
 .prod-mark{
   height: 15%;
 }
 .prod-mark label{
   font-size: 10px;
+}
+.price-kg{
+  width: 100%;
+  float: left;
+}
+
+.price-current{
+  font-size: 15px;
+  color: #F27A24;
+  margin: 0 7px 5px 0;
+  width: 100%;
+}
+.price-prev{
+  font-size: 12px;
+  text-decoration: line-through;
+  width: 100%; 
+  color:#5D5D5D;
+}
+
+.list-view button{
+  color: #F27A24;
+  border-style: solid;
+  border-color: #F27A24;
+  border-radius: 5px;
+  border-width: 2px;
+}
+.list-view button:hover{
+  color: #fff;
+  background-color: #F27A24;
+}
+.price-unit{
+  font-size: 11px;
+  line-height: 9px;
+  margin: 10px 0 10px 0;
+  color: #707070;
+  font-weight: 600;
 }

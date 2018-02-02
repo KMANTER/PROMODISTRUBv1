@@ -10,7 +10,6 @@
                     <input [(ngModel)]="itemFilter.isSelected"  class="le-checkbox" type="checkbox" /> <label>{{itemFilter.libellet}}</label> <span class="pull-right">({{itemFilter.count}})</span></li>
             </ul>
         </div><!-- /.category-filter -->
-        <button mat-button (click)="filtrer()" class="filter-button" >FILTRER</button> 
 
         <div class="price-filter">
             <h2>Prix</h2>
@@ -22,6 +21,8 @@
                 </span>
             </div> 
         </div><!-- /.price-filter -->
-
+        <div style="padding-bottom: 40px;">
+            <button mat-button (click)="filtrer()" class="filter-button" >FILTRER</button> 
+        </div>
     </div><!-- /.body -->
 </div><!-- /.widget -->

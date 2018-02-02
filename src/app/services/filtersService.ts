@@ -133,11 +133,11 @@ export class FiltersService {
         }
       });
   }
-  private getPriceFromStr(price: string): number{
-    let priceNumber: number = parseFloat(price.substring(0,price.indexOf("€")).replace(",","."));
-    if(isNaN(priceNumber)){
-      priceNumber = 0;
+  private getPriceFromStr(price: any): number{
+    //let priceNumber: number = parseFloat(price.substring(0,price.indexOf("€")).replace(",","."));
+    if(isNaN(price)){
+      price = 0;
     }
-    return priceNumber;
+    return price;
   }
 }

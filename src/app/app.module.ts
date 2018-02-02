@@ -24,6 +24,10 @@ import { productDetailsComponent } from './components/product-details-component/
 import { ProductsListComponent } from './components/products-list-component/products-list-component';
 import { FiltersComponent } from './components/filters-component/filters-component';
 import { SimpleTimer } from 'ng2-simple-timer';
+import { Ng2OrderModule } from 'ng2-order-pipe'; //importing the module
+import { MatSelectModule } from '@angular/material/select';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
+
 
 const appRoutes: Routes = [
   { path: '', component: IndexComponent,
@@ -52,13 +56,13 @@ const appRoutes: Routes = [
     MylistComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,
+    BrowserModule,BrowserAnimationsModule, ToastModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
     FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,
-    MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule
+    MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule, Ng2OrderModule, MatSelectModule 
   ],
   providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService, MylistServices],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ItemProductComponent implements OnInit {
+  @Input('isGridMode') gridMode: boolean; 
   @Input() product: Product;
   counterSec = 60;
 	counterMin = 56;
@@ -24,10 +25,10 @@ export class ItemProductComponent implements OnInit {
   
   constructor(private st: SimpleTimer, private searchServices: SearchServices,
     private route: ActivatedRoute) { 
-    
   }
 
 	ngOnInit() {
+    console.log(this.gridMode);
 		this.st.newTimer('1sec',1);
 		this.st.newTimer('1min',60);
 		this.st.newTimer('1hour',3600);
@@ -38,7 +39,21 @@ export class ItemProductComponent implements OnInit {
 		this.subscribeTimerDay();
     
 	}
+  diffBetweenTwoDates(){
+    date_future = new Date(new Date().getFullYear() +1, 0, 1);
+    date_now = new Date();
 
+    seconds = Math.floor((date_future - (date_now))/1000);
+    minutes = Math.floor(seconds/60);
+    hours = Math.floor(minutes/60);
+    days = Math.floor(hours/24);
+    
+    hours = hours-(days*24);
+    minutes = minutes-(days*24*60)-(hours*60);
+    seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+
+    $("#time").text("Time until new year:\nDays: " + days + " Hours: " + hours + " Minutes: " + minutes + " Seconds: " + seconds);
+  }
 	/*delAllTimer() {
 		this.st.delTimer('1sec');
 		this.st.delTimer('5sec');

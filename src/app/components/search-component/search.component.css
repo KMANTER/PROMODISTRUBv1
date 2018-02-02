@@ -49,6 +49,7 @@
         border-radius: 0 5px 5px 0;
         width: 10%;
         height: 42.5px;
+        cursor: pointer;
         }
          .top-search-holder .search-area .search-button:hover {
           background-color: #939393; }
@@ -194,3 +195,35 @@
           vertical-align: middle;
           margin: -1px 0 0 8px;
         }
+
+.item-product{
+  width: 100%;
+  max-height: 20px;
+}
+.item-product-img{
+  float: left;
+  width: 20%;
+  height: 100%;
+  max-height: 70px;
+  text-align: center;
+}
+.item-product-img img{
+  padding:5px;
+  max-height: 70px;
+}
+.item-product-name-mark{
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+.item-product-name-mark h5{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.item-product-price{
+  width: 20%;
+  height: 100%;
+  float: right;
+  text-align: right;
+}

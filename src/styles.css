@@ -2745,13 +2745,13 @@ header {
   width: 77%; }
 .sidebar .price-filter {
   border-top: 1px solid #e0e0e0;
-  padding: 60px 0 0 0; }
+  padding: 20px 0 0 0; }
 .sidebar .price-range-holder {
   padding: 18px 0px 47px 0px;
   position: relative; }
 
   .sidebar .price-range-holder .min-max, .sidebar .filter-button {
-    margin: 14px 0 0 0;
+    /*margin: 14px 0 0 0;*/
     font-size: 13px; 
   }
   .sidebar  .filter-button:hover{

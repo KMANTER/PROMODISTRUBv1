@@ -4,8 +4,9 @@ export class Product {
   id: number;
   name: string;
   mark: string;  
-  price: string;  
-  oldPrice: string;  
+  price: any;  
+  oldPrice: string;
+  devise: string;  
   tva: string;
   priceByUnit: string[]  
   urlImage: string;

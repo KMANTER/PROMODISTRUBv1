@@ -21,13 +21,15 @@
       "styles": [
         "styles.css",
         "../node_modules/owl.carousel/dist/assets/owl.carousel.css",
-        "../node_modules/owl.carousel/dist/assets/owl.theme.default.css"
+        "../node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/owl.carousel/dist/owl.carousel.js",
         "../node_modules/underscore/underscore.js", 
-        "../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"
+        "../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js",
+        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

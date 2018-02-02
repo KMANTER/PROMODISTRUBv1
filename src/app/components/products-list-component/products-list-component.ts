@@ -24,18 +24,14 @@ export class ProductsListComponent implements OnInit {
   searchResult = [];
   filteredOptions: Observable<string[]>;
   searchTerm : FormControl = new FormControl();
-  options = [
-    'One',
-    'Two',
-    'Three'
-  ];
   myControl: FormControl = new FormControl();
-
+  private sortByselected: string;
+  public grid: string = 'grid';
+  public list: string = 'list';
   constructor(private dataServices: DataService, 
     private searchServices: SearchServices,
     private route: ActivatedRoute,
     private filtersService: FiltersService){
-      
   }
   ngOnInit() {
     this.newProducts = this.dataServices.getNewProducts();
@@ -47,10 +43,10 @@ export class ProductsListComponent implements OnInit {
       map(val => this.filter(val))
     );*/
   }    
-  filter(val: string): string[] {
+  /*filter(val: string): string[] {
     return this.options.filter(option =>
       option.toLowerCase().indexOf(val.toLowerCase()) === 0);
-  }
+  }*/
   ngOnDestroy() {
   }
 
@@ -68,5 +64,13 @@ export class ProductsListComponent implements OnInit {
   }
   getItemsCount(){
     return this.filtersService.countAllActiveFilters === 0 && (this.searchServices.listSearchProduct) ? this.searchServices.listSearchProduct.length : this.filtersService.listFiltredProducts.length
+  }
+  sortByChange(){
+    switch(this.sortByselected){
+      case 'lowPrice':{this.searchServices.order.by = "price"; this.searchServices.order.reverse = false;}break;
+      case 'hightPrice':{this.searchServices.order.by = "price"; this.searchServices.order.reverse = true;}break;
+      case 'pertinence':{this.searchServices.order.by = "name";this.searchServices.order.reverse = false;}break;
+      case 'new':{this.searchServices.order.by = "isNewProduct";this.searchServices.order.reverse = true;}break;
+    }
   }
 }

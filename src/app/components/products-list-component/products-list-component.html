@@ -34,7 +34,7 @@
         <div id="new-products" class="row">
             <owl-carousel #owlElementNewProd [options]="{items: 4 ,navigation: true, pagination: true, rewindNav : true, autoplay:true, autoplayTimeout:3000}" >
                 <div *ngFor="let p of searchServices.listNewProducts" class="no-margin  product-item-holder hover">
-                    <item-product-component [product]="p"></item-product-component>                                    
+                    <item-product-component [product]="p" [isGridMode]="true"></item-product-component>                                    
                 </div><!-- /. -->
             </owl-carousel>
         </div>
@@ -59,7 +59,7 @@
         <div id="prod-vente-flash" class="row">
             <owl-carousel #owlElementVentesFlash [options]="{items: 4 ,navigation: true, pagination: true, rewindNav : true, autoplay:true, autoplayTimeout:3000}" >
                 <div *ngFor="let p of searchServices.listFlashSellProducts" class=" product-item-holder hover">
-                    <item-product-component [product]="p"></item-product-component>                                    
+                    <item-product-component [product]="p" [isGridMode]="true"></item-product-component>                                    
                 </div><!-- /. -->
             </owl-carousel>
 
@@ -76,15 +76,15 @@
                 <div class="item-count">
                     <span>{{filtersService.productCount}}</span> résultats
                 </div>
-                <span></span>                                        
-                <div id="sort-by" class="le-select">
-                    <select>
-                        <option value="0">Trier par</option>
-                        <option value="1">Pertinence</option>
-                        <option value="2">Nouveautés</option>
-                        <option value="3">Plus bas prix</option>
-                        <option value="4">Prix le plus élevé</option>
-                    </select>
+                <div class="sort-by" >
+                    <mat-form-field>
+                        <mat-select (change)="sortByChange()" [(value)]="sortByselected" placeholder="Trier par..." panelClass="panel-sort-by-style">
+                            <mat-option value="lowPrice">Plus bas prix</mat-option>
+                            <mat-option value="hightPrice">Prix le plus élevé</mat-option>
+                            <mat-option value="new">Nouveautés</mat-option>
+                            <mat-option value="pertinence">Pertinence</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
                 </div>
                 <div class="grid-list-buttons">
                     <ul>
@@ -99,8 +99,8 @@
                     <div class="product-grid-holder">
                         <div class="row no-margin" >
                             <div >
-                                <div *ngFor="let p of filtersService.getListProduct()" class="col-xs-12 col-sm-4 col-md-12 no-margin product-item-holder ">
-                                    <item-product-component [product]="p"></item-product-component>
+                                <div *ngFor="let p of filtersService.getListProduct() | orderBy: searchServices.order.by : searchServices.order.reverse " class="col-xs-12 col-sm-4 col-md-12 no-margin product-item-holder ">
+                                    <item-product-component [product]="p" [isGridMode]="true"></item-product-component>
                                 </div><!-- /.product-item-holder -->
                             </div>
 
@@ -132,42 +132,8 @@
                 <div id="list-view" class="products-grid fade tab-pane ">
                     <div class="products-list">
 
-                        <div *ngFor="let product of searchServices.allProducts" class="product-item product-item-holder" >
-                            <div [ngClass]="{'ribbon': true, 'red': product.statut === 'En vente', 'blue': product.statut === 'Nouveau!'}"><span>{{product.statut}}</span></div>
-                            <div *ngIf="product.tag !== ''" class="ribbon orange"><span>{{product.tag}}</span></div>                                                
-                            <div class="row">
-                                <div class="no-margin col-xs-12 col-sm-4 image-holder">
-                                    <div class="image">
-                                        <img alt="" [src]="product.urlImage"/>
-                                    </div>
-                                </div><!-- /.image-holder -->
-                                <div class="no-margin col-xs-12 col-sm-5 body-holder">
-                                    <div class="body">
-                                        <div class="label-discount orange">{{product.labelDiscount}}</div>
-                                        <div class="title">
-                                            <a href="#">{{product.name}}</a>
-                                        </div>
-                                        <div class="brand">{{product.mark}}</div>
-                                        <div class="excerpt">
-                                            <p>{{product.description}}</p>
-                                        </div>
-                                        <div class="addto-compare">
-                                            <a class="btn-add-to-compare" href="#">Ajouter à liste de comparaison</a>
-                                        </div>
-                                    </div>
-                                </div><!-- /.body-holder -->
-                                <div class="no-margin col-xs-12 col-sm-3 price-area">
-                                    <div class="right-clmn">
-                                        <div class="price-current">{{product.price}}</div>
-                                        <div class="price-prev">{{product.oldPrice}}</div>
-                                        <div class="availability"><label>Disponibilité:</label>
-                                            <span *ngIf="product.availability" class="available">  En stock</span>
-                                            <span *ngIf="!product.availability" class="not-available">Epuisé</span>                                                            </div>
-                                        <a class="le-button" href="#">Ajouter au panier</a>
-                                        <a class="btn-add-to-wishlist" href="#">Ajouter au wishlist</a>
-                                    </div>
-                                </div><!-- /.price-area -->
-                            </div><!-- /.row -->
+                        <div *ngFor="let p of filtersService.getListProduct() | orderBy: searchServices.order.by : searchServices.order.reverse" class="product-item product-item-holder" >
+                            <item-product-component [product]="p" [isGridMode]="false"></item-product-component>
                         </div><!-- /.product-item -->
 
 

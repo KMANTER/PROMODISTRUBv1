@@ -17,12 +17,17 @@ export class SearchServices {
   static distanceMax: number = 50;
   private userPosition: Position;
   public searchLabelText: string;
+  public order: any;
   constructor(public dataServices: DataService, private filtersService: FiltersService) {
     this.listSearchProduct = null;
     this.listFlashSellProducts = dataServices.getProductsVentesFlash();
     this.listNewProducts = dataServices.getNewProducts();
     this.userPosition = null;
     this.searchLabelText = "";
+    this.order = {
+      by: 'name',
+      reverse: false,
+    };
   }
 
   searchProducts(searchWord: string): Product[]{
