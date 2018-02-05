@@ -3,7 +3,7 @@ import {FormControl} from '@angular/forms';
 import { Product } from '../../modeles/product';
 import {SimpleTimer} from 'ng2-simple-timer';
 import { SearchServices } from '../../services/searchServices';
-import { ActivatedRoute } from '@angular/router';
+import { Counter } from '../../modeles/counter';
 
 @Component({
   selector: 'item-product-component',
@@ -14,21 +14,16 @@ import { ActivatedRoute } from '@angular/router';
 export class ItemProductComponent implements OnInit {
   @Input('isGridMode') gridMode: boolean; 
   @Input() product: Product;
-  counterSec = 60;
-	counterMin = 56;
-	counterHour = 20;
-	counterDay = 2;
   timerSecId: string;
   timerMinId: string;
   timerHourId: string;
   timerDayId: string;
-  
-  constructor(private st: SimpleTimer, private searchServices: SearchServices,
-    private route: ActivatedRoute) { 
+  private counter: Counter;
+  constructor(private st: SimpleTimer, private searchServices: SearchServices) { 
   }
 
 	ngOnInit() {
-    console.log(this.gridMode);
+    this.counter = this.setTimer(this.product.endPromoDate);
 		this.st.newTimer('1sec',1);
 		this.st.newTimer('1min',60);
 		this.st.newTimer('1hour',3600);
@@ -39,20 +34,18 @@ export class ItemProductComponent implements OnInit {
 		this.subscribeTimerDay();
     
 	}
-  diffBetweenTwoDates(){
-    date_future = new Date(new Date().getFullYear() +1, 0, 1);
-    date_now = new Date();
-
-    seconds = Math.floor((date_future - (date_now))/1000);
-    minutes = Math.floor(seconds/60);
-    hours = Math.floor(minutes/60);
-    days = Math.floor(hours/24);
-    
+  setTimer(dateEndPromo: string): Counter{
+    var datePromo: Date = new Date(dateEndPromo);
+    var dateNow = new Date();
+    var seconds = Math.floor((datePromo.getTime() - (dateNow.getTime()))/1000);
+    var minutes = Math.floor(seconds/60);
+    var hours = Math.floor(minutes/60);
+    var days = Math.floor(hours/24);
     hours = hours-(days*24);
     minutes = minutes-(days*24*60)-(hours*60);
     seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
-
-    $("#time").text("Time until new year:\nDays: " + days + " Hours: " + hours + " Minutes: " + minutes + " Seconds: " + seconds);
+    //console.log("Time until new year:\nDays: " + days + " Hours: " + hours + " Minutes: " + minutes + " Seconds: " + seconds);
+    return new Counter(seconds, minutes, hours, days);
   }
 	/*delAllTimer() {
 		this.st.delTimer('1sec');
@@ -100,28 +93,28 @@ export class ItemProductComponent implements OnInit {
 	timerCallback(option: string) {
     switch(option){
       case "sec": {
-        if(this.counterSec === 0){
-          this.counterSec = 60;
+        if(this.counter.counterSec === 0){
+          this.counter.counterSec = 60;
         }
-        this.counterSec--;
+        this.counter.counterSec--;
       }break;
       case "min": {
-        if(this.counterMin === 0){
-          this.counterMin = 60;
+        if(this.counter.counterMin === 0){
+          this.counter.counterMin = 60;
         }
-        this.counterMin--;
+        this.counter.counterMin--;
       }break;
       case "hour": {
-        if(this.counterHour === 0){
-          this.counterHour = 24;
+        if(this.counter.counterHour === 0){
+          this.counter.counterHour = 24;
         }
-        this.counterHour--;
+        this.counter.counterHour--;
       }break;
       case "day": {
-        if(this.counterDay === 0){
-          this.counterDay = 30;
+        if(this.counter.counterDay === 0){
+          this.counter.counterDay = 30;
         }
-        this.counterDay--;
+        this.counter.counterDay--;
       }break;
     }
 

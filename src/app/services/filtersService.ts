@@ -17,6 +17,7 @@ export class FiltersService {
   maxPrice: number;
   isActivatedFilterPrice: boolean;
   filterPriceValue: number;
+  filterActionOn: boolean;
   constructor() {
     this.countAllActiveFilters = 0;
     this.listFiltredProducts =[];
@@ -40,7 +41,7 @@ export class FiltersService {
     this.listSearchProduct = productsList;
   }
   public getListProduct(): Product[]{
-    if(this.countAllActiveFilters > 0){
+    if(this.filterActionOn){
       this.productCount = this.listFiltredProducts.length;
       return this.listFiltredProducts;
     }else{
@@ -91,7 +92,7 @@ export class FiltersService {
         }
       });
     });
-    if(this.countAllActiveFilters === 0){
+    if(this.countAllActiveFilters === 0 || initMaxPrice){
       this.filterPriceValue = this.maxPrice;
     }
     this.isInitialized = true;
@@ -122,6 +123,7 @@ export class FiltersService {
       this.countAllActiveFilters ++;
     }
     this.initFiltersGroups(this.countAllActiveFilters > 0 ? this.listFiltredProducts : this.listSearchProduct);
+    this.filterActionOn = true;
   }
   private priceFilter(maxPrice: number, products: Product[]): Product[]{
       return products.filter((value:Product)=>{

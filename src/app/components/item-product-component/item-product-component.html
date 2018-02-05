@@ -17,7 +17,7 @@
             <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button> 
             <div class="price-kg">{{product.priceByUnit[0]}}</div>                               
         </div>
-        <div class="promo-timer"><span>Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </span></div>
+        <div class="promo-timer"><span>Il reste {{counter.counterDay}}j {{counter.counterHour}}h {{counter.counterMin}}m {{counter.counterSec}}s </span></div>
     </div>
 </div><!-- /.product-item -->
 <div *ngIf="!gridMode" class="list-view">
@@ -33,7 +33,8 @@
                 <div class="label-discount orange"></div>
                 <div class="prod-name"><label>{{product.name}}</label></div>
                 <div class="prod-mark-list-view"><label>{{product.mark}}</label></div>
-                <div class="promo-timer-list-view"><span>Il reste {{counterDay}}j {{counterHour}}h {{counterMin}}m {{counterSec}}s </span></div>
+                <div class="promo-timer-list-view"><span>Il reste {{counter.counterDay}}j 
+                    {{counter.counterHour}}h {{counter.counterMin}}m {{counter.counterSec}}s </span></div>
             </div>
         </div><!-- /.body-holder -->
         <div class="no-margin col-xs-12 col-sm-3 price-area">

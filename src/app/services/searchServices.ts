@@ -55,6 +55,7 @@ export class SearchServices {
   }
   public searchProductsByRequest(req: string){
     this.searchLabelText = "Résultats de recherche pour `"+req+"`";  
+    this.filtersService.filterActionOn = false;
     this.searchActionOn = true;
     var dataProducts: Product[] = this.dataServices.getAllProduct();
     this.listSearchProduct = dataProducts.filter((p: Product)=>{
@@ -70,6 +71,7 @@ export class SearchServices {
   }
   public searchProductByCat(typeCat: string, req: string){
     this.searchLabelText = req;  
+    this.filtersService.filterActionOn = false;
     this.searchActionOn = true;
     var dataProducts: Product[] = this.dataServices.getAllProduct();  
     switch(typeCat){

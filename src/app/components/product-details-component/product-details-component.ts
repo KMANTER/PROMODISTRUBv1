@@ -7,6 +7,7 @@ import { ActivatedRoute  } from '@angular/router';
 import {SearchServices} from '../../services/searchServices';
 import { MylistServices } from '../../services/myListService';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { Counter } from '../../modeles/counter';
 
 @Component({
   selector: 'product-details-component',
@@ -21,10 +22,7 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   sub: any;
   items1: number[] = [1, 2, 3, 4, 5];
   testimgFournisseur: string
-  counterSec = 60;
-	counterMin = 56;
-	counterHour = 20;
-	counterDay = 2;
+
   timerSecId: string;
   timerMinId: string;
   timerHourId: string;
@@ -33,6 +31,7 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   isDescTabActive: boolean;
   isRecetteTabActive: boolean;
   private quantity: number;
+  private counter: Counter;
   constructor(private st: SimpleTimer, private route: ActivatedRoute,
     private searchServices: SearchServices, private mylistServices: MylistServices, private _location: Location,
     public toastr: ToastsManager, vcr: ViewContainerRef) { 
@@ -57,6 +56,20 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
 		this.subscribeTimerMin();
 		this.subscribeTimerHour();
     this.subscribeTimerDay();
+    this.counter = this.setTimer(this.product.endPromoDate);
+  }
+  setTimer(dateEndPromo: string): Counter{
+    var datePromo: Date = new Date(dateEndPromo);
+    var dateNow = new Date();
+    var seconds = Math.floor((datePromo.getTime() - (dateNow.getTime()))/1000);
+    var minutes = Math.floor(seconds/60);
+    var hours = Math.floor(minutes/60);
+    var days = Math.floor(hours/24);
+    hours = hours-(days*24);
+    minutes = minutes-(days*24*60)-(hours*60);
+    seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+    //console.log("Time until new year:\nDays: " + days + " Hours: " + hours + " Minutes: " + minutes + " Seconds: " + seconds);
+    return new Counter(seconds, minutes, hours, days);
   }
   ngOnDestroy(){
     this.sub.unsubscribe();
@@ -122,28 +135,28 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
 	timerCallback(option: string) {
     switch(option){
       case "sec": {
-        if(this.counterSec === 0){
-          this.counterSec = 60;
+        if(this.counter.counterSec === 0){
+          this.counter.counterSec = 60;
         }
-        this.counterSec--;
+        this.counter.counterSec--;
       }break;
       case "min": {
-        if(this.counterMin === 0){
-          this.counterMin = 60;
+        if(this.counter.counterMin === 0){
+          this.counter.counterMin = 60;
         }
-        this.counterMin--;
+        this.counter.counterMin--;
       }break;
       case "hour": {
-        if(this.counterHour === 0){
-          this.counterHour = 24;
+        if(this.counter.counterHour === 0){
+          this.counter.counterHour = 24;
         }
-        this.counterHour--;
+        this.counter.counterHour--;
       }break;
       case "day": {
-        if(this.counterDay === 0){
-          this.counterDay = 30;
+        if(this.counter.counterDay === 0){
+          this.counter.counterDay = 30;
         }
-        this.counterDay--;
+        this.counter.counterDay--;
       }break;
     }
 
@@ -156,6 +169,6 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
     this.isSupplTabActive = true;
     this.isDescTabActive = false;
     this.isRecetteTabActive = false;
-    window.scrollTo(element.getBoundingClientRect().x, element.getBoundingClientRect().y/2);
+    window.scrollTo(element.getBoundingClientRect().x, element.getBoundingClientRect().y - 100);
 }
 }

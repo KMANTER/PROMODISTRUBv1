@@ -1,6 +1,6 @@
 <div class="container no-padding">
   <div class="header-section" [ngClass]= "{'page-scroll-header': isScrolled}">
-    <div class="col-xs-12 col-md-2 logo-holder" style="padding:0 0 0 10px;">
+    <div class="col-xs-12 col-sm-6 col-md-2 logo-holder" style="padding:0 0 0 10px;">
         <!-- ============================================================= LOGO ============================================================= -->
         <div class="logo">
             <a href="index.html">
@@ -10,21 +10,21 @@
         <!-- ============================================================= LOGO : END ============================================================= -->
     </div><!-- /.logo-holder -->
 
-    <div class="col-xs-12 col-md-2 nav-option">
-      <div class="col-xs-12 col-md-1 item-connect">
+    <div class="col-xs-12 col-sm-6 col-md-2 nav-option">
+      <div class="col-xs-12 col-sm-6 col-md-1 item-connect">
           <i class="material-icons dp48" >perm_identity</i>                                                                                    
           <div class="caption label-connect">Connectez-vous</div>
       </div>
-      <div class="col-xs-12 col-md-1 item-basket" [routerLink]="['/maListe']">
+      <div class="col-xs-12 col-sm-4 col-md-1 item-basket" [routerLink]="['/maListe']">
           <i class="material-icons dp48" >view_list</i>                                                                                    
           <div class="caption label-my-list">Ma liste</div>
       </div>
     </div>
-    <div class="col-xs-12 col-md-8 search-option" style="padding:0 0 0 20px;">
-      <div class="col-xs-12 col-md-8">
+    <div class="col-xs-12 col-sm-12 col-md-8 search-option" style="padding:0 0 0 20px;">
+      <div class="col-xs-12 col-sm-8 col-md-8">
         <search-component ></search-component> 
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <geolocation-component ></geolocation-component>   
       </div>                
     </div>
