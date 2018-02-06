@@ -9,6 +9,7 @@ import { DataService } from '../../services/dataServices';
 import { SearchServices } from '../../services/searchServices';
 import { ActivatedRoute } from '@angular/router';
 import { FiltersService } from '../../services/filtersService';
+import { AssetsServices } from '../../services/assetsServices';
 
 @Component({
   selector: 'products-list-component',
@@ -19,6 +20,7 @@ import { FiltersService } from '../../services/filtersService';
 export class ProductsListComponent implements OnInit {
   @ViewChild('owlElementNewProd') owlElementNewProd: OwlCarousel;
   @ViewChild('owlElementVentesFlash') owlElementVFlash: OwlCarousel;
+  @ViewChild('target') elementHTMLTarget: any;
 
   private newProducts; products; productsVentesFlash: Product[];
   searchResult = [];
@@ -30,23 +32,14 @@ export class ProductsListComponent implements OnInit {
   public list: string = 'list';
   constructor(private dataServices: DataService, 
     private searchServices: SearchServices,
-    private route: ActivatedRoute,
-    private filtersService: FiltersService){
+    private filtersService: FiltersService, private assetsServices: AssetsServices){
   }
   ngOnInit() {
     this.newProducts = this.dataServices.getNewProducts();
     this.productsVentesFlash = this.dataServices.getProductsVentesFlash();
-    //this.specialsOffresproducts = this.dataServices.getSpecialOffresProduct();
-   /* this.filteredOptions = this.myControl.valueChanges
-    .pipe(
-      startWith(''),
-      map(val => this.filter(val))
-    );*/
+    this.assetsServices.listProductsElementHTML = this.elementHTMLTarget;
   }    
-  /*filter(val: string): string[] {
-    return this.options.filter(option =>
-      option.toLowerCase().indexOf(val.toLowerCase()) === 0);
-  }*/
+
   ngOnDestroy() {
   }
 

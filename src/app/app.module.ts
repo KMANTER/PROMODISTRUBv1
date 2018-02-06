@@ -18,6 +18,7 @@ import { AuthService } from './services/authService';
 import { SearchComponent } from './components/search-component/search.component';
 import { FiltersService } from '../app/services/filtersService';
 import { MylistServices } from '../app/services/myListService';
+import { AssetsServices } from '../app/services/assetsServices';
 import { GeolocationComponent } from './components/geolocation-component/geolocation-component';
 import { ItemProductComponent } from './components/item-product-component/item-product-component'
 import { productDetailsComponent } from './components/product-details-component/product-details-component'
@@ -64,7 +65,7 @@ const appRoutes: Routes = [
     FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,
     MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule, Ng2OrderModule, MatSelectModule 
   ],
-  providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService, MylistServices],
+  providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService, MylistServices, AssetsServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

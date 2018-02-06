@@ -7,6 +7,7 @@ import {map} from 'rxjs/operators/map';
 import { Product } from '../../modeles/product';
 import { ObjSearchProducts } from '../../modeles/searchProducts';
 import { Position } from '@angular/compiler';
+import { AssetsServices } from '../../services/assetsServices';
 
 @Component({
   selector: 'search-component',
@@ -19,7 +20,7 @@ export class SearchComponent implements OnInit {
   filteredProducts: Observable<Product[]>;  
   searchWords: string[];
   word: string;
-  constructor(private searchServices: SearchServices, public cdRef:ChangeDetectorRef) { 
+  constructor(private searchServices: SearchServices, public cdRef:ChangeDetectorRef, private assetservices: AssetsServices) { 
 
   }
   ngAfterViewInit() {
@@ -46,6 +47,7 @@ export class SearchComponent implements OnInit {
     });
 }
 search(value: string){
+  this.assetservices.scrollToProductList();
   this.searchServices.searchProductsByRequest(value);
 }
 

@@ -62,8 +62,11 @@ export class FiltersService {
   public initFiltersGroups(productsList: Product[], initMaxPrice?: boolean){
     this.productCount = productsList.length;
     this.initListFilterGroups();
-    productsList.forEach((p: Product)=>{
+    productsList.forEach((p: Product, index: number)=>{
       if(initMaxPrice){
+        if(index === 0){
+          this.maxPrice = 0;
+        }
         let price: number = this.getPriceFromStr(p.price);
         if( price> this.maxPrice){
           this.maxPrice = price;
