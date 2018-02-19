@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.css']
 })
 export class FooterComponent {
-  private showFeaturesProducts: boolean = false
+  public showFeaturesProducts: boolean = false
 }

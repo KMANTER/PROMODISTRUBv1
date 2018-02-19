@@ -4,12 +4,13 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatAutocompleteModule, MatInputModule, MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule } from '@angular/material';
 import { OwlModule } from 'ngx-owl-carousel';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate  } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header';
 import { FooterComponent } from './components/footer/footer';
 import { CardComponent } from './components/component-card/card';
 import { IndexComponent } from './pages/index-page/index-page';
+import { UnderConstructionPage } from './pages/under-construction-page/under-construction-page';
 import { MylistComponent } from './components/mylist-component/mylist-component';
 import { LandingComponentComponent } from './pages/landing-page/landing-page';
 import { SearchServices } from './services/searchServices';
@@ -28,16 +29,16 @@ import { SimpleTimer } from 'ng2-simple-timer';
 import { Ng2OrderModule } from 'ng2-order-pipe'; //importing the module
 import { MatSelectModule } from '@angular/material/select';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
-
+import { CanActivateRouteGuard } from '../app/services/can-activate-route.guard';
 
 const appRoutes: Routes = [
-  { path: '', component: IndexComponent,
+  { path: 'accueil', component: IndexComponent, canActivate: [CanActivateRouteGuard],
   children: [
-    { path: '', redirectTo: 'accueil', pathMatch: 'full' },
-    { path: 'accueil', component:  ProductsListComponent},
-    { path: 'produit/:id', component: productDetailsComponent },
+    { path: '', component:  ProductsListComponent},
+    { path: 'produit/:id', component: productDetailsComponent},
     { path: 'maListe', component: MylistComponent }
-  ] }
+  ] },
+  { path: '', component: UnderConstructionPage }
 ];
 
 @NgModule({
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     FooterComponent,
     CardComponent,
     IndexComponent,
+    UnderConstructionPage,
     LandingComponentComponent,
     SearchComponent,
     GeolocationComponent,
@@ -65,7 +67,7 @@ const appRoutes: Routes = [
     FormsModule,ReactiveFormsModule, OwlModule,MatAutocompleteModule,MatInputModule,
     MatOptionModule, MatButtonModule,MatCheckboxModule, MatSliderModule, Ng2OrderModule, MatSelectModule 
   ],
-  providers: [DataService, AuthService, SearchServices, SimpleTimer, FiltersService, MylistServices, AssetsServices],
+  providers: [DataService, AuthService, CanActivateRouteGuard, SearchServices, SimpleTimer, FiltersService, MylistServices, AssetsServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

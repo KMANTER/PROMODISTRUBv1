@@ -11,7 +11,7 @@ import { AssetsServices } from '../../services/assetsServices';
 })
 export class IndexComponent implements OnInit{
   listCategories: Category[];
-  constructor(private dataService: DataService, private searchService: SearchServices, private assetservices: AssetsServices){
+  constructor(private dataService: DataService, public searchService: SearchServices, private assetservices: AssetsServices){
     
   }
   ngOnInit() {

@@ -14,7 +14,7 @@
                            <span [innerHTML]="highlight(product.name, inputSearch.value)"> {{ product.name }}</span>
                         </mat-option>
                         <hr>  
-                        <mat-option *ngFor="let product of filteredProducts | async" [routerLink]="['/produit',product.id]" [value]="product.name" style="min-height: 70px;padding:0;" >
+                        <mat-option *ngFor="let product of filteredProducts | async" [routerLink]="['/accueil/produit',product.id]" [value]="product.name" style="min-height: 70px;padding:0;" >
                                 <div class="item-product-img">
                                     <img [src]="product.urlImage" />
                                 </div>

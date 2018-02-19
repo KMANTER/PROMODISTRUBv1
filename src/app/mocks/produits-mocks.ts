@@ -1,6 +1,7 @@
 import { Product } from '../modeles/product';
 import { ProductSupplier, AddressSupplier } from '../modeles/productsupplier';
 import { Category } from '../modeles/category';
+import { Label } from '../modeles/label';
 
 export const categories: Category[] =[{
   name:"Charcuterie et produits traiteurs",
@@ -92,7 +93,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 2,
@@ -126,7 +128,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 3,
@@ -160,7 +163,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 4,
@@ -184,7 +188,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 5,
@@ -220,7 +225,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 6,
@@ -244,7 +250,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 7,
@@ -280,7 +287,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 8,
@@ -304,7 +312,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: true,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 9,
@@ -340,7 +349,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 10,
@@ -364,7 +374,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: new Label("Label Rouge","assets/images/logo/logo-label-rouge.png")
 },
 {
   id: 11,
@@ -400,7 +411,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 12,
@@ -436,7 +448,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 13,
@@ -472,7 +485,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 14,
@@ -496,7 +510,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 15,
@@ -532,7 +547,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 16,
@@ -568,7 +584,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: true,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 17,
@@ -605,7 +622,8 @@ export const products: Product[] =
   purchaseConditions:["Vendu par lot de 6 briques"],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit:"45639609"
+  refProduit:"45639609",
+  label: null
 },
 {
   id: 18,
@@ -645,7 +663,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "8728446"
+  refProduit: "8728446",
+  label: null
 },
 {
   id: 19,
@@ -682,7 +701,8 @@ export const products: Product[] =
   purchaseConditions:["A l’unité"],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit:"722334"
+  refProduit:"722334",
+  label: null
 },
 {
   id: 20,
@@ -713,7 +733,8 @@ export const products: Product[] =
   purchaseConditions:["A l’unité"],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "57743899"
+  refProduit: "57743899",
+  label: null
 },
 {
   id: 21,
@@ -749,7 +770,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 22,
@@ -785,7 +807,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 23,
@@ -809,7 +832,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 24,
@@ -833,7 +857,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 25,
@@ -857,7 +882,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 26,
@@ -891,7 +917,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 27,
@@ -925,7 +952,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 28,
@@ -949,7 +977,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 29,
@@ -983,7 +1012,8 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
 },
 {
   id: 30,
@@ -1023,5 +1053,106 @@ export const products: Product[] =
   purchaseConditions:[],
   isNewProduct: false,
   isFlashSale: false,
-  refProduit: "ref12345678"
+  refProduit: "ref12345678",
+  label: null
+},
+{
+  id: 31,
+  name: "Farine de sarrazin 25 kg",
+  mark: "AU MOULIN DE LA FATIGUE",
+  price: 95,
+  oldPrice: "126",
+  devise:"€ HT",
+  tva: "5,5%",
+  priceByUnit: ["5,04€HT le KG"],
+  urlImage: "assets/images/products/product-id-31.png",
+  urlThumb: "",
+  description: [],
+  supplier: new ProductSupplier(9, "Au moulin de la fatigue",[],[],[],[],[],[],null,[],"", new AddressSupplier(1,"Versailles",48.80486,2.12036)),
+  statut: "",
+  type: "ambiant",
+  endPromoDate: "31/01/2018",
+  category: "Boulangerie",
+  subCategory: "Farine et mix",
+  ProductConditioning: [],
+  purchaseConditions:[],
+  isNewProduct: false,
+  isFlashSale: false,
+  refProduit: "ref12345678",
+  label: new Label("Bio","assets/images/logo/bio.png")
+},
+{
+  id: 32,
+  name: "Saumon fumé biologique irlandais tranché main 2kg",
+  mark: "LE FUMOIR GASTRONOMIQUE",
+  price: 96.60,
+  oldPrice: "138",
+  devise:"€ HT",
+  tva: "5,5%",
+  priceByUnit: ["69€HT le KG"],
+  urlImage: "assets/images/products/product-id-32.png",
+  urlThumb: "",
+  description: [],
+  supplier: new ProductSupplier(10, "Le fumoir gastronomique",[],[],[],[],[],[],null,[],"", new AddressSupplier(1,"Versailles",48.80486,2.12036)),
+  statut: "",
+  type: "frais",
+  endPromoDate: "31/01/2018",
+  category: "Produits de la mer",
+  subCategory: "Poisson",
+  ProductConditioning: [],
+  purchaseConditions:[],
+  isNewProduct: false,
+  isFlashSale: false,
+  refProduit: "ref12345678",
+  label: new Label("Bio","assets/images/logo/bio.png")
+},
+{
+  id: 33,
+  name: "Camembert au lait Cru 250g",
+  mark: "GILLOT",
+  price: 2.40,
+  oldPrice: "3,10",
+  devise:"€ HT",
+  tva: "5,5%",
+  priceByUnit: ["9,60€HT le KG"],
+  urlImage: "assets/images/products/product-id-33.png",
+  urlThumb: "",
+  description: [],
+  supplier: new ProductSupplier(11, "GILLOT",[],[],[],[],[],[],null,[],"", new AddressSupplier(1,"Versailles",48.80486,2.12036)),
+  statut: "",
+  type: "frais",
+  endPromoDate: "31/01/2018",
+  category: "Fromages et produits laitiers",
+  subCategory: "Fromage",
+  ProductConditioning: [],
+  purchaseConditions:[],
+  isNewProduct: false,
+  isFlashSale: false,
+  refProduit: "ref12345678",
+  label: new Label("Bio","assets/images/logo/bio.png")
+},
+{
+  id: 34,
+  name: "Jambon Blanc Biologique tranché 320g",
+  mark: "MARCEL SAVEUR BIO",
+  price: 6.30,
+  oldPrice: "9,00",
+  devise:"€ HT",
+  tva: "5,5%",
+  priceByUnit: ["19,69€HT le KG"],
+  urlImage: "assets/images/products/product-id-34.png",
+  urlThumb: "",
+  description: [],
+  supplier: new ProductSupplier(12, "Marcel Saveur Bio",[],[],[],[],[],[],null,[],"", new AddressSupplier(1,"Versailles",48.80486,2.12036)),
+  statut: "",
+  type: "frais",
+  endPromoDate: "31/01/2018",
+  category: "Charcuterie et produits traiteurs",
+  subCategory: "Charcuterie",
+  ProductConditioning: [],
+  purchaseConditions:[],
+  isNewProduct: false,
+  isFlashSale: false,
+  refProduit: "ref12345678",
+  label: new Label("Bio","assets/images/logo/bio.png")
 }];

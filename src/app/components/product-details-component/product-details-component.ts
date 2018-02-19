@@ -30,8 +30,8 @@ export  class productDetailsComponent implements OnInit, OnDestroy {
   isSupplTabActive: boolean;
   isDescTabActive: boolean;
   isRecetteTabActive: boolean;
-  private quantity: number;
-  private counter: Counter;
+  public quantity: number;
+  public  counter: Counter;
   constructor(private st: SimpleTimer, private route: ActivatedRoute,
     private searchServices: SearchServices, private mylistServices: MylistServices, private _location: Location,
     public toastr: ToastsManager, vcr: ViewContainerRef) { 

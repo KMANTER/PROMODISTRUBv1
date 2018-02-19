@@ -554,8 +554,8 @@
         /*===================================================================================*/
         /*  Yamm Dropdown
         /*===================================================================================*/
-        $(document).on('click', '.yamm .dropdown-menu', function(e) {
+       /* $(document).on('click', '.yamm .dropdown-menu', function(e) {
           e.stopPropagation()
-        });
+        });*/
 
 })(jQuery);

@@ -18,7 +18,7 @@ export class ItemProductComponent implements OnInit {
   timerMinId: string;
   timerHourId: string;
   timerDayId: string;
-  private counter: Counter;
+  public counter: Counter;
   constructor(private st: SimpleTimer, private searchServices: SearchServices) { 
   }
 

@@ -20,7 +20,7 @@ export class FiltersComponent implements OnInit {
   minPrice = 0;
   step = 1;
   priceValue = 0;
-  constructor(private filtersService: FiltersService, private assetservices: AssetsServices) { 
+  constructor(public filtersService: FiltersService, private assetservices: AssetsServices) { 
     this.selected = false;
   }
 

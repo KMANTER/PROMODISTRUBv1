@@ -8,8 +8,8 @@ import { Component, OnInit, Input  } from '@angular/core';
 export class CardComponent {
 @Input() isFloatRight: boolean;
 @Input() cardEntityName: string;
-private entityName: string;
-private arrayAvantages: string[];
+public entityName: string;
+public arrayAvantages: string[];
     constructor() { 
 
     }

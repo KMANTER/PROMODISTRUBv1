@@ -34,7 +34,8 @@ export class FiltersService {
     this.filtersGroups = [
       new GroupFiltersObject("Types"),
       new GroupFiltersObject("Marques"),
-      new GroupFiltersObject("Fournisseurs")
+      new GroupFiltersObject("Fournisseurs"),
+      new GroupFiltersObject("Labels")
     ];
   }
   public setListSearchProduct(productsList: Product[]){
@@ -78,20 +79,23 @@ export class FiltersService {
           case 'Types':{filterValue= p.type}break;
           case 'Marques':{filterValue= p.mark}break;
           case 'Fournisseurs':{filterValue = p.supplier.name}break;
+          case 'Labels':{filterValue = p.label ? p.label.libelle : null}break;
           default: break;
         }
-        var pos = filterGroup.listFilters.findIndex((element: FilterGenericObject)=>{
-          if(element.libellet == filterValue){
-            element.count++;
-            element.isSelected= this.listSelectedItemFilter.findIndex(value => value === filterValue) !== -1;
-            element.listProducts.push(p);
-            return true;
-          }else{
-            return false;
+        if(filterValue){
+          var pos = filterGroup.listFilters.findIndex((element: FilterGenericObject)=>{
+            if(element.libellet == filterValue){
+              element.count++;
+              element.isSelected= this.listSelectedItemFilter.findIndex(value => value === filterValue) !== -1;
+              element.listProducts.push(p);
+              return true;
+            }else{
+              return false;
+            }
+          });
+          if(pos === -1){
+            filterGroup.listFilters.push(new FilterGenericObject(filterValue,p, this.listSelectedItemFilter.findIndex(value => value === filterValue) !== -1));
           }
-        });
-        if(pos === -1){
-          filterGroup.listFilters.push(new FilterGenericObject(filterValue,p, this.listSelectedItemFilter.findIndex(value => value === filterValue) !== -1));
         }
       });
     });
@@ -125,8 +129,13 @@ export class FiltersService {
       this.listFiltredProducts = this.priceFilter(this.filterPriceValue, this.listSearchProduct);
       this.countAllActiveFilters ++;
     }
-    this.initFiltersGroups(this.countAllActiveFilters > 0 ? this.listFiltredProducts : this.listSearchProduct);
-    this.filterActionOn = true;
+    if(this.countAllActiveFilters > 0){
+      this.initFiltersGroups(this.listFiltredProducts);
+      this.filterActionOn = true;
+    }else{
+      this.initFiltersGroups(this.listSearchProduct);
+      this.filterActionOn = false;
+    }
   }
   private priceFilter(maxPrice: number, products: Product[]): Product[]{
       return products.filter((value:Product)=>{

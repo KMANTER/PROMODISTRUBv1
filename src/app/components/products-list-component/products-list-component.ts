@@ -27,12 +27,12 @@ export class ProductsListComponent implements OnInit {
   filteredOptions: Observable<string[]>;
   searchTerm : FormControl = new FormControl();
   myControl: FormControl = new FormControl();
-  private sortByselected: string;
+  public sortByselected: string;
   public grid: string = 'grid';
   public list: string = 'list';
   constructor(private dataServices: DataService, 
-    private searchServices: SearchServices,
-    private filtersService: FiltersService, private assetsServices: AssetsServices){
+    public searchServices: SearchServices,
+    public filtersService: FiltersService, private assetsServices: AssetsServices){
   }
   ngOnInit() {
     this.newProducts = this.dataServices.getNewProducts();

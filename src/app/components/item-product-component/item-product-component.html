@@ -1,5 +1,6 @@
 <div class="product-item" *ngIf="gridMode">
-    <div class="ribbon blue"><span>sale</span></div>        
+    <div class="ribbon blue" *ngIf="!product.label"><span>sale</span></div>  
+    <div *ngIf="product.label" class="logo"><img [src]="product.label.logo" /></div>         
     <div class="image">
         <img alt="" [src]="product.urlImage" />
     </div>
@@ -14,14 +15,15 @@
                     <label class="old-price">{{product.oldPrice}}{{product.devise}}</label>
                 </div>
             </div>
-            <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button> 
+            <button mat-button class="item-button-show-prod" [routerLink]="['/accueil/produit',product.id]">VOIR LA PROMO</button> 
             <div class="price-kg">{{product.priceByUnit[0]}}</div>                               
         </div>
         <div class="promo-timer"><span>Il reste {{counter.counterDay}}j {{counter.counterHour}}h {{counter.counterMin}}m {{counter.counterSec}}s </span></div>
     </div>
 </div><!-- /.product-item -->
 <div *ngIf="!gridMode" class="list-view">
-    <div class="ribbon blue"><span>sale</span></div>        
+    <div class="ribbon blue" *ngIf="!product.label"><span>sale</span></div>        
+    <div *ngIf="product.label" class="logo"><img [src]="product.label.logo" /></div>         
     <div class="row">
         <div class="no-margin col-xs-12 col-sm-4 image-holder">
             <div class="image">
@@ -42,7 +44,7 @@
                 <div class="price-current">{{product.price}}{{product.devise}}</div>
                 <div class="price-prev">{{product.oldPrice}}{{product.devise}}</div>
                 <div class="price-unit" ><label >{{product.priceByUnit[0]}}</label></div>
-                <button mat-button class="item-button-show-prod" [routerLink]="['/produit',product.id]">VOIR LA PROMO</button>                                
+                <button mat-button class="item-button-show-prod" [routerLink]="['/accueil/produit',product.id]">VOIR LA PROMO</button>                                
             </div>
         </div><!-- /.price-area -->
     </div><!-- /.row -->

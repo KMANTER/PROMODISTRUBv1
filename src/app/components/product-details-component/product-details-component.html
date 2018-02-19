@@ -2,6 +2,7 @@
     <button mat-fab class="back-btn" (click)="backPage()"><i class="material-icons">keyboard_backspace</i></button>        
 </div>
 <div id="single-product" class="row">
+  <div *ngIf="product.label" class="logo"><img [src]="product.label.logo" /></div>         
   <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
     <div class="product-item-holder size-big single-product-gallery small-gallery">
       <owl-carousel [options]="{items:1,navigation: true, pagination: false, rewindNav : false}" >
@@ -53,7 +54,7 @@
     </div>
     <div class="aide-question">
         <label>Comment passer la commande?</label>
-        <div class="en-ligne-supplier" [hidden]="product.supplier.mail.website ===0">
+        <div class="en-ligne-supplier" [hidden]="product.supplier.website.length ===0">
           <div [ngStyle]="{'width':'100%'}">
               <label>En ligne: </label>
               <a *ngFor="let website of product.supplier.website">{{website}}</a>

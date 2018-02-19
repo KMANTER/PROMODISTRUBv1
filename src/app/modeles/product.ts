@@ -1,4 +1,5 @@
 import { ProductSupplier } from "./productsupplier";
+import { Label } from "./label";
 
 export class Product {
   id: number;
@@ -23,4 +24,6 @@ export class Product {
   isNewProduct: boolean;
   isFlashSale: boolean;
   refProduit: string;
+  label?:Label;
+
 }
